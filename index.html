@@ -1,0 +1,1406 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pisicuțele">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Pisicuțele Sofiei</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --sky:#D6ECF5; --sky2:#BFE0EE; --paper:#FFFFFF; --ink:#1F2A44; --ink2:#51607E;
+  --pink:#FF7A8A; --pinkS:#FFE0E5; --gold:#FFC940; --goldS:#FFF1C9;
+  --mint:#23A970; --mintS:#D3F2E3; --blue:#4F9FDE; --orange:#F2994A; --lock:#E4EAF2;
+  --display:"Baloo 2","Trebuchet MS","Comic Sans MS",system-ui,sans-serif;
+  --body:"Nunito","Segoe UI",system-ui,sans-serif;
+}
+html,body{height:100%}
+body{
+  background-color:var(--sky);
+  background-image:radial-gradient(circle at 12px 12px, rgba(255,255,255,.55) 3px, transparent 3.5px);
+  background-size:44px 44px;
+  color:var(--ink); font-family:var(--body); font-size:17px; font-weight:700;
+  -webkit-tap-highlight-color:transparent; touch-action:manipulation;
+  -webkit-user-select:none; user-select:none; overflow:hidden;
+}
+#app{height:100%; display:flex; flex-direction:column; padding-inline:16px; max-width:1180px; margin:0 auto}
+button{font:inherit; color:inherit; cursor:pointer; border:0; background:none; touch-action:manipulation}
+button:focus-visible{outline:4px solid var(--blue); outline-offset:3px}
+h1,h2,h3{font-family:var(--display); margin:0; line-height:1.1; text-wrap:balance}
+
+/* header */
+.top{display:flex; align-items:center; gap:12px; padding-block:12px 8px}
+.brand{font-family:var(--display); font-weight:800; font-size:clamp(22px,3.4vw,30px); flex:1; letter-spacing:.2px}
+.brand span{color:var(--pink)}
+.icon-btn{width:52px; height:52px; border-radius:16px; background:var(--paper); border:3px solid var(--ink); box-shadow:0 4px 0 var(--ink); display:grid; place-items:center}
+.icon-btn:active{transform:translateY(3px); box-shadow:0 1px 0 var(--ink)}
+.icon-btn svg{width:26px; height:26px}
+.fish-pill{display:flex; align-items:center; gap:8px; background:var(--goldS); border:3px solid var(--ink); border-radius:999px; padding:6px 16px 6px 10px; font-family:var(--display); font-weight:800; font-size:24px; box-shadow:0 4px 0 var(--ink); font-variant-numeric:tabular-nums}
+.fish-pill svg{width:34px; height:24px}
+.fish-pill.pop{animation:pop .4s}
+.streak-pill{display:flex; align-items:center; gap:6px; background:var(--paper); border:3px solid var(--ink); border-radius:999px; padding:4px 14px 4px 8px; box-shadow:0 4px 0 var(--ink); font-family:var(--display); font-weight:800; font-size:22px; font-variant-numeric:tabular-nums}
+.streak-pill svg{width:28px; height:30px}
+.streak-pill .sl{font-size:15px; color:var(--ink2)}
+.streak-pill.lit{background:#FFE6CF}
+.streak-pill:not(.lit) svg{filter:grayscale(.6); opacity:.7}
+.week-row{display:flex; gap:5px; align-items:center; flex-wrap:wrap}
+.week-row .wd{width:30px; height:30px; border-radius:50%; border:2.5px solid rgba(31,42,68,.3); display:grid; place-items:center; font-size:12px; font-weight:900; color:var(--ink2); background:#fff}
+.week-row .wd.done{background:var(--mint); border-color:var(--mint); color:#fff}
+.week-row .wd.fix{background:#D6E9FA; border-color:var(--blue); color:var(--ink)}
+.week-row .wd.miss{background:#F1F4F8; color:#B5BDCB; text-decoration:line-through}
+.week-row .wd.today{border:3px solid var(--ink)}
+.week-row .wd.sun{width:34px; height:34px; border-radius:10px; background:var(--goldS); border-color:#F1CF6B}
+.week-row .wd.sun.done{background:var(--gold); color:var(--ink)}
+.week-row .wtxt{font-size:13px; color:var(--ink2); flex:1; min-width:140px; line-height:1.25}
+.week-table{display:flex; align-items:center; gap:10px; border:3px dashed var(--pink); border-radius:16px; background:#FFF4F6; padding:5px 12px; text-align:left; font-size:16px; line-height:1.3}
+.week-table b{font-family:var(--display); font-size:22px; color:var(--pink)}
+.week-table.on{border-style:solid}
+.chip .x2{position:absolute; top:-10px; left:-8px; background:var(--pink); color:#fff; font-size:12px; border-radius:999px; padding:1px 6px; border:2px solid var(--ink)}
+.gift{display:flex; align-items:center; gap:14px; width:100%; border:3px solid var(--ink); border-radius:22px; background:#FFF4F6; padding:10px 16px; box-shadow:0 5px 0 var(--ink); text-align:left; font-size:18px}
+.gift svg{width:70px; height:70px; flex:none}
+.gift.wiggle svg{animation:wiggle 1.2s ease-in-out infinite}
+@keyframes wiggle{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-8deg)}80%{transform:rotate(8deg)}90%{transform:rotate(-4deg)}}
+.gift.opened{background:var(--goldS); box-shadow:none}
+.gift b{font-family:var(--display); font-size:22px}
+.reward-set{display:flex; gap:8px; align-items:center; flex-wrap:wrap; justify-content:center; font-size:15px; max-width:640px; text-align:center}
+.reward-set input{font:inherit; font-size:16px; border:2px solid var(--ink); border-radius:12px; padding:8px 12px; min-width:0; width:260px; max-width:100%; -webkit-user-select:text; user-select:text}
+.overlay{position:fixed; inset:0; z-index:60; background:rgba(31,42,68,.55); display:grid; place-items:center; padding:16px}
+.ov-card{max-width:520px; width:100%; padding:22px; display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center}
+.ov-card .mini-cat{width:130px; height:136px}
+.ov-card h2{font-size:30px}
+.ov-card p{margin:0; font-size:18px; line-height:1.4}
+.ov-card .actions{width:100%}
+.ov-card .actions .btn{min-height:70px; font-size:20px}
+.cal .d.fix{background:#D6E9FA; color:var(--ink); border-color:var(--blue)}
+.goal-pill{display:flex; align-items:center; gap:8px; background:var(--paper); border:3px solid var(--ink); border-radius:999px; padding:6px 14px 6px 12px; box-shadow:0 4px 0 var(--ink); font-family:var(--display); font-weight:800; font-size:20px; font-variant-numeric:tabular-nums}
+.goal-pill .gl{font-size:15px; color:var(--ink2)}
+.gp-bar{width:80px; height:14px; border:2px solid var(--ink); border-radius:999px; overflow:hidden; background:#F1F4F8}
+.gp-bar i{display:block; height:100%; width:0; background:var(--mint); transition:width .4s}
+.goal-pill.done{background:var(--mintS)}
+.goal-pill.done .gp-bar i{background:var(--mint)}
+.mission{display:flex; gap:14px; align-items:center; padding:12px 16px 12px 10px}
+.mission.done{background:var(--mintS)}
+.mission .mc{width:66px; height:70px; flex:none; position:relative}
+.mission .mc .medal{position:absolute; right:-8px; bottom:-4px; width:38px; height:46px}
+.mission-body{flex:1; min-width:0; display:flex; flex-direction:column; gap:6px}
+.mission h3{font-size:20px}
+.mission p{font-size:14px !important}
+.mission p{margin:0; font-size:15px; color:var(--ink2); line-height:1.35}
+.big-bar{height:22px; border:3px solid var(--ink); border-radius:999px; background:#F1F4F8; overflow:hidden; position:relative}
+.big-bar i{display:block; height:100%; background:linear-gradient(90deg,var(--gold),var(--mint)); border-radius:999px; transition:width .5s}
+.big-bar span{position:absolute; inset:0; display:grid; place-items:center; font-size:13px; font-weight:900}
+.mission-win{display:flex; align-items:center; gap:14px; background:var(--mintS); border:3px solid var(--ink); border-radius:22px; padding:12px 16px; text-align:left; width:100%}
+.mission-win .mc{width:96px; height:100px; flex:none; position:relative}
+.mission-win .mc .medal{position:absolute; right:-10px; bottom:-4px; width:42px; height:50px}
+.mission-win h3{font-size:26px}
+.mission-win p{margin:4px 0 0; font-size:16px; line-height:1.35}
+.mission-note{font-size:16px; color:var(--ink2)}
+.cal{display:grid; grid-template-columns:repeat(7,1fr); gap:5px; max-width:340px; margin:0 auto}
+.cal .dn{font-size:12px; font-weight:900; color:var(--ink2); text-align:center; text-transform:uppercase}
+.cal .d{aspect-ratio:1; border-radius:12px; border:2px solid rgba(31,42,68,.15); background:#F1F4F8; display:grid; place-items:center; font-family:var(--display); font-weight:800; font-size:15px; color:#A6B0C2; position:relative; max-width:100%}
+.cal .d.part{background:var(--goldS); color:var(--ink); border-color:#F1CF6B}
+.cal .d.done{background:var(--mint); color:#fff; border-color:var(--mint)}
+.cal .d.today{outline:3px solid var(--ink); outline-offset:1px}
+.cal .d.empty{visibility:hidden}
+.goal-set{display:flex; gap:8px; align-items:center; flex-wrap:wrap; justify-content:center; font-size:15px}
+.goal-set button{border:2px solid var(--ink); border-radius:12px; padding:6px 14px; background:var(--paper); font-family:var(--display); font-weight:800; font-size:17px}
+.goal-set button.on{background:var(--ink); color:#fff}
+@keyframes pop{50%{transform:scale(1.18)}}
+
+main{flex:1; min-height:0; position:relative}
+.screen{height:100%; overflow-y:auto; overflow-x:hidden; padding-block:6px 20px; -webkit-overflow-scrolling:touch}
+
+.card{background:var(--paper); border:3px solid var(--ink); border-radius:26px; box-shadow:0 6px 0 var(--ink)}
+
+/* buttons */
+.btn{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; border:3px solid var(--ink); border-radius:22px; box-shadow:0 6px 0 var(--ink); font-family:var(--display); font-weight:800; transition:transform .06s}
+.btn:active:not(:disabled){transform:translateY(4px); box-shadow:0 2px 0 var(--ink)}
+.btn small{font-family:var(--body); font-size:15px; font-weight:700; opacity:.85}
+.btn.primary{background:var(--pink); color:#fff}
+.btn.primary small{color:#fff}
+.btn.gold{background:var(--gold)}
+.btn.white{background:var(--paper)}
+.btn.mint{background:var(--mint); color:#fff}
+.btn:disabled{background:var(--lock); color:var(--ink2); box-shadow:0 3px 0 #9AA6BD; border-color:#9AA6BD; cursor:default}
+
+/* home */
+.home-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:22px; align-items:stretch}
+.stage{position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding:18px 18px 16px; min-height:420px; background:linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 62%,var(--pinkS) 62%)}
+.stage .cat-wrap{width:min(100%,250px); aspect-ratio:1/1.05; display:block; padding:0; border-radius:30px}
+.stage{background:linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 46%,var(--pinkS) 46%) !important}
+.house{width:100%; margin-top:12px; background:#F3E3D3; border:3px solid var(--ink); border-radius:20px; padding:8px 10px 10px; box-shadow:inset 0 -10px 0 #E2C9AF}
+.house-title{font-size:13px; font-weight:900; letter-spacing:.8px; text-transform:uppercase; color:#7A5A3E; text-align:center; margin-bottom:4px}
+.house-row{display:flex; flex-wrap:wrap; justify-content:center; gap:4px 6px}
+.hcat{width:72px; display:flex; flex-direction:column; align-items:center; padding:0; border-radius:14px; position:relative}
+.hcat .pic{width:64px; height:67px; display:block}
+.hcat .nm{font-family:var(--display); font-weight:800; font-size:14px; line-height:1.1}
+.hcat.on .nm{color:var(--pink)}
+.hcat .idle{display:block; width:100%; height:100%; animation:idle 3.2s ease-in-out infinite; transform-origin:50% 100%}
+@keyframes idle{0%,100%{transform:scale(1,1)}50%{transform:scale(1.03,.97)}}
+.hcat.ghost .pic{filter:brightness(0); opacity:.14}
+.hcat.ghost .nm{color:#7A5A3E; font-size:12px}
+.purr{animation:purr .5s ease-in-out}
+@keyframes purr{0%,100%{transform:rotate(0) scale(1)}20%{transform:rotate(-4deg) scale(1.06)}40%{transform:rotate(4deg) scale(1.06)}60%{transform:rotate(-3deg) scale(1.04)}80%{transform:rotate(2deg) scale(1.02)}}
+.heart{position:fixed; z-index:45; pointer-events:none; width:34px; height:30px; animation:heartUp 1.1s ease-out forwards}
+@keyframes heartUp{from{opacity:1; transform:translate(0,0) scale(.6)} to{opacity:0; transform:translate(var(--dx,0px),-110px) scale(1.2)}}
+.pet-hint{font-size:13px; color:var(--ink2); margin-top:2px}
+.stage .cushion{width:80%; height:26px; background:rgba(31,42,68,.12); border-radius:50%; margin-top:-18px}
+.stage-name{font-family:var(--display); font-size:26px; font-weight:800; margin-top:6px}
+.stage-sub{color:var(--ink2); font-size:15px}
+.bubble{position:relative; background:var(--paper); border:3px solid var(--ink); border-radius:20px; padding:10px 16px; font-weight:800; font-size:18px; line-height:1.3; max-width:34ch; text-align:center}
+.bubble::after{content:""; position:absolute; left:50%; bottom:-14px; width:20px; height:20px; background:var(--paper); border-right:3px solid var(--ink); border-bottom:3px solid var(--ink); transform:translateX(-50%) rotate(45deg)}
+.stage .bubble{margin-bottom:auto; margin-top:4px}
+
+.panel{display:flex; flex-direction:column; gap:10px}
+.panel h2{font-size:26px}
+.label{font-size:14px; font-weight:900; letter-spacing:.8px; text-transform:uppercase; color:var(--ink2)}
+.seg{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+.seg button, .chip{border:3px solid var(--ink); border-radius:16px; background:var(--paper); font-family:var(--display); font-weight:800; font-size:19px; min-height:56px; box-shadow:0 4px 0 var(--ink); padding:4px 6px}
+.seg button .sym{display:block; font-size:26px; line-height:1}
+.seg button.on{background:var(--ink); color:#fff}
+.chips{display:grid; grid-template-columns:repeat(6,1fr); gap:9px}
+.chip{font-size:24px; min-height:48px; position:relative}
+.chip.on{background:var(--gold)}
+.chip.all{font-size:17px}
+.chip .st{position:absolute; top:-9px; right:-7px; width:22px; height:22px}
+.seg button:active,.chip:active{transform:translateY(3px); box-shadow:0 1px 0 var(--ink)}
+.actions{display:grid; gap:14px; grid-template-columns:1fr 1fr}
+.actions .btn{min-height:84px; font-size:25px; padding:8px}
+.actions.two .btn{min-height:64px; font-size:21px; flex-direction:row; gap:10px}
+.actions.two svg{width:30px; height:30px}
+
+/* play */
+.play-grid{display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:22px; height:100%; align-items:stretch}
+.q-side{display:flex; flex-direction:column; gap:14px; min-height:0}
+.progress-dots{display:flex; gap:6px; flex-wrap:wrap; align-items:center; min-height:30px}
+.progress-dots i{width:24px; height:24px; border-radius:50%; border:3px solid var(--ink); background:var(--paper); display:block}
+.progress-dots i.ok{background:var(--mint)}
+.progress-dots i.retry{background:var(--gold)}
+.progress-dots i.now{background:var(--pink); transform:scale(1.15)}
+.race{display:flex; align-items:center; gap:12px}
+.track{flex:1; position:relative; height:54px; border:3px solid var(--ink); border-radius:999px; background:var(--paper); overflow:visible}
+.track .fill{position:absolute; left:0; top:0; bottom:0; border-radius:999px; background:var(--pinkS); width:0}
+.runner{position:absolute; top:50%; left:0; width:58px; height:58px; transform:translate(-8%,-58%); transition:left .35s ease}
+.yarn{position:absolute; right:4px; top:50%; width:40px; height:40px; transform:translateY(-50%)}
+.timer{font-family:var(--display); font-weight:800; font-size:30px; min-width:78px; text-align:center; background:var(--gold); border:3px solid var(--ink); border-radius:16px; padding:2px 8px; font-variant-numeric:tabular-nums}
+.timer.low{background:var(--pink); color:#fff}
+.q-card{flex:1; min-height:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; padding:18px; position:relative; overflow:hidden}
+.q-kind{position:absolute; top:12px; left:16px; font-size:14px; font-weight:900; letter-spacing:.8px; text-transform:uppercase; color:var(--ink2)}
+.q-text{font-family:var(--display); font-weight:800; font-size:clamp(52px,8.5vw,104px); line-height:1; display:flex; align-items:center; gap:.18em; white-space:nowrap; font-variant-numeric:tabular-nums}
+.q-text .op{color:var(--pink)}
+.ans{min-width:1.6em; padding:.02em .18em; border:4px dashed var(--ink2); border-radius:18px; text-align:center; background:#F6F9FC}
+.ans.typing{border-style:solid; border-color:var(--ink)}
+.ans.ok{background:var(--mintS); border:4px solid var(--mint); color:var(--mint)}
+.ans.bad{background:var(--pinkS); border:4px solid var(--pink)}
+.ans.reveal{background:var(--goldS); border:4px solid var(--gold)}
+.feedback{font-size:20px; font-weight:800; text-align:center; min-height:1.3em; max-width:42ch; line-height:1.35}
+.feedback.tip{background:var(--goldS); border-radius:16px; padding:10px 14px; font-size:18px}
+.hint-area{display:flex; flex-direction:column; align-items:center; gap:6px; width:100%}
+.hint-cap{font-size:16px; color:var(--ink2); text-align:center}
+.paws{display:grid; gap:3px; justify-content:center}
+.paws svg{width:var(--pw,20px); height:var(--pw,20px); display:block}
+.paws .r0{color:var(--pink)} .paws .r1{color:var(--orange)}
+.cat-row{display:flex; align-items:flex-end; gap:18px; min-height:96px}
+.mini-cat{width:92px; height:96px; flex:none}
+.cat-row .bubble{margin-bottom:26px; text-align:left; font-size:17px; padding:8px 14px}
+.cat-row .bubble::after{left:-13px; bottom:14px; transform:rotate(135deg)}
+.pad-side{display:flex; flex-direction:column; gap:14px; justify-content:center; min-height:0}
+.numpad{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+.numpad button{min-height:clamp(62px,10.5vh,92px); font-size:clamp(30px,4.2vw,42px)}
+.numpad .ok-key{background:var(--mint); color:#fff}
+.numpad .del-key{background:var(--pinkS)}
+.numpad .del-key svg{width:36px; height:28px}
+.pad-extra .btn{width:100%; min-height:60px; font-size:20px; flex-direction:row; gap:10px}
+.pad-extra svg{width:28px; height:28px}
+
+.bounce{animation:bounce .6s}
+@keyframes bounce{0%,100%{transform:translateY(0)}30%{transform:translateY(-18px) rotate(-3deg)}60%{transform:translateY(0)}80%{transform:translateY(-6px)}}
+.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-10px)}40%,80%{transform:translateX(10px)}}
+.float-fish{position:fixed; z-index:40; pointer-events:none; font-family:var(--display); font-weight:800; font-size:30px; display:flex; align-items:center; gap:4px; animation:floatUp 1s ease-out forwards}
+.float-fish svg{width:40px; height:28px}
+@keyframes floatUp{from{opacity:1; transform:translateY(0) scale(1)} to{opacity:0; transform:translateY(-90px) scale(1.2)}}
+
+/* results */
+.result{max-width:640px; margin:10px auto; padding:26px 22px; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center}
+.stars{display:flex; gap:10px; align-items:flex-end}
+.stars svg{width:78px; height:78px}
+.stars svg:nth-child(2){width:98px; height:98px}
+.result h2{font-size:38px}
+.result .mini-cat{width:150px; height:156px}
+.stat-row{display:flex; gap:12px; flex-wrap:wrap; justify-content:center}
+.stat{background:#F4F8FB; border:3px solid var(--ink); border-radius:18px; padding:8px 16px; min-width:120px}
+.stat b{display:block; font-family:var(--display); font-size:32px; line-height:1.1; font-variant-numeric:tabular-nums}
+.stat span{font-size:14px; color:var(--ink2)}
+.review{display:flex; flex-wrap:wrap; gap:8px; justify-content:center}
+.review span{background:var(--goldS); border:2px solid var(--ink); border-radius:12px; padding:4px 12px; font-family:var(--display); font-size:22px; font-weight:800}
+.result .actions{width:100%}
+.result .actions .btn{min-height:70px; font-size:22px}
+
+/* shop */
+.shop-head{display:flex; align-items:center; gap:18px; margin-bottom:14px; flex-wrap:wrap}
+.shop-head .mini-cat{width:120px; height:126px}
+.shop-head h2{font-size:32px}
+.shop-head p{margin:4px 0 0; color:var(--ink2); max-width:48ch}
+.section-title{font-size:24px; margin:18px 0 12px}
+.grid-cards{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:16px}
+.pcard{display:flex; flex-direction:column; align-items:center; gap:6px; padding:12px 12px 14px; text-align:center}
+.pcard .pic{width:130px; height:136px; position:relative}
+.pcard.locked .pic{filter:saturate(.25) brightness(1.05); opacity:.7}
+.pcard h3{font-size:22px}
+.pcard .price{display:flex; align-items:center; gap:4px; font-family:var(--display); font-size:20px; font-weight:800}
+.pcard .price svg{width:28px; height:20px}
+.pcard .btn{width:100%; min-height:50px; font-size:18px; box-shadow:0 4px 0 var(--ink)}
+.pcard.active{background:var(--goldS)}
+.pcard.golden{background:linear-gradient(160deg,#FFF8DC 0%,#FFE27A 100%); position:relative}
+.pcard.golden.locked .pic{filter:none; opacity:1}
+.pcard.golden.locked .pic svg{filter:grayscale(.15)}
+.special-tag{position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--ink); color:var(--gold); font-size:12px; font-weight:900; letter-spacing:.8px; text-transform:uppercase; padding:3px 10px; border-radius:999px; white-space:nowrap}
+.need{font-size:13px; color:var(--ink2); min-height:1.2em}
+
+/* progress */
+.prog-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:18px}
+.tile{padding:14px 16px}
+.tile b{display:block; font-family:var(--display); font-size:36px; line-height:1.05; font-variant-numeric:tabular-nums}
+.tile span{color:var(--ink2); font-size:15px}
+.two-col{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:18px; align-items:start}
+.box-card{padding:16px}
+.box-card h3{font-size:24px; margin-bottom:4px}
+.box-card p{margin:0 0 12px; color:var(--ink2); font-size:15px}
+.table-wrap{overflow-x:auto}
+table.mt{border-collapse:separate; border-spacing:4px; margin:0 auto; font-family:var(--display); font-weight:800; font-variant-numeric:tabular-nums}
+table.mt th{font-size:17px; width:38px; height:34px; color:var(--ink2)}
+table.mt th.corner{color:var(--pink); font-size:22px}
+table.mt td{width:38px; height:36px; text-align:center; border-radius:9px; font-size:15px; border:2px solid rgba(31,42,68,.15); background:#F1F4F8; color:#A6B0C2}
+table.mt td.l1{background:var(--pinkS); color:var(--ink); border-color:#F6AAB5}
+table.mt td.l2{background:var(--goldS); color:var(--ink); border-color:#F1CF6B}
+table.mt td.l3{background:var(--mintS); color:var(--ink); border-color:#7DD3AA}
+table.mt td.l4{background:var(--mint); color:#fff; border-color:var(--mint)}
+.legend{display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:12px; font-size:14px}
+.legend i{display:inline-block; width:18px; height:18px; border-radius:6px; vertical-align:-4px; margin-right:5px; border:2px solid rgba(31,42,68,.2)}
+.bars{display:flex; flex-direction:column; gap:10px}
+.bar-row{display:grid; grid-template-columns:72px 1fr 1fr; gap:8px; align-items:center; font-size:15px}
+.bar-row .t{font-family:var(--display); font-size:19px; font-weight:800}
+.bar{height:20px; border:2px solid var(--ink); border-radius:999px; background:#F1F4F8; overflow:hidden}
+.bar i{display:block; height:100%; background:var(--pink); border-radius:999px}
+.bar.div i{background:var(--blue)}
+.bar-head{display:grid; grid-template-columns:72px 1fr 1fr; gap:8px; font-size:13px; font-weight:900; letter-spacing:.6px; text-transform:uppercase; color:var(--ink2)}
+.reset-row{margin-top:26px; display:flex; flex-direction:column; align-items:center; gap:8px}
+.link-btn{color:var(--ink2); text-decoration:underline; font-size:14px; padding:8px}
+.confirm{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:center}
+.confirm .btn{min-height:44px; padding:4px 16px; font-size:16px; box-shadow:0 3px 0 var(--ink)}
+
+#confetti{position:fixed; inset:0; width:100%; height:100%; pointer-events:none; z-index:50}
+
+/* layout adaptations */
+@media (max-aspect-ratio: 1/1){
+  .play-grid{grid-template-columns:1fr; height:auto}
+  .q-side{display:contents}
+  .progress-dots,.race{order:1}
+  .q-card{order:2; min-height:230px}
+  .cat-row{order:3; min-height:90px}
+  .mini-cat{width:90px; height:95px}
+  .pad-side{order:4}
+  .numpad button{min-height:clamp(58px,7.5vh,84px)}
+}
+@media (max-width: 820px){
+  .home-grid{grid-template-columns:1fr}
+  .stage{min-height:340px}
+  .stage .cat-wrap{width:min(60%,220px)}
+  .two-col{grid-template-columns:1fr}
+  .prog-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 520px){
+  .goal-pill .gl{display:none}
+  .streak-pill .sl{display:none}
+  .streak-pill{font-size:18px; padding:3px 10px 3px 6px}
+  .brand{display:none}
+  .gp-bar{width:40px}
+  .goal-pill{font-size:17px; padding:4px 10px}
+  .chips{grid-template-columns:repeat(4,1fr)}
+  .actions{grid-template-columns:1fr}
+  .actions.two{grid-template-columns:1fr 1fr}
+  .brand{font-size:20px}
+  .fish-pill{font-size:20px; padding:4px 12px 4px 8px}
+  .icon-btn{width:46px; height:46px}
+  .seg button{font-size:16px}
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important}
+}
+</style>
+
+<div id="app">
+  <header class="top">
+    <button class="icon-btn" id="homeBtn" hidden aria-label="Înapoi acasă">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1F2A44" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+    </button>
+    <div class="brand">Pisicuțele <span>Sofiei</span></div>
+    <div class="streak-pill" id="streakPill" aria-label="Zile la rând"><span id="streakFlame"></span><b id="streakNum">0</b><span class="sl" id="streakLbl">zile</span></div>
+    <div class="goal-pill" id="goalPill" aria-label="Misiunea de azi"><span class="gl">Azi</span><div class="gp-bar"><i id="gpFill"></i></div><span id="gpText">0/50</span></div>
+    <div class="fish-pill" id="fishPill" aria-label="Peștișori"><span class="fish-ico"></span><span id="fishCount">0</span></div>
+    <button class="icon-btn" id="soundBtn" aria-label="Sunet pornit/oprit"></button>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="screen" id="scr-home">
+      <div class="home-grid">
+        <div class="stage card">
+          <div class="bubble" id="homeBubble">Miau!</div>
+          <button class="cat-wrap" id="homeCat" aria-label="Mângâie pisica"></button>
+          <div class="cushion"></div>
+          <div class="stage-name" id="homeCatName">Burrito</div>
+          <div class="stage-sub" id="homeSub"></div>
+          <div class="house">
+            <div class="house-title">Casa pisicilor · atinge o pisică s-o mângâi</div>
+            <div class="house-row" id="house"></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="mission card" id="mission"></div>
+          <h2>Ce exersăm azi?</h2>
+          <div class="seg" id="opSeg">
+            <button data-op="mul" id="op-mul"><span class="sym">×</span>Înmulțire</button>
+            <button data-op="div" id="op-div"><span class="sym">:</span>Împărțire</button>
+            <button data-op="mix" id="op-mix"><span class="sym">× :</span>Amândouă</button>
+          </div>
+          <button class="week-table" id="weekTable"></button>
+          <div class="label">Alege tablele</div>
+          <div class="chips" id="tableChips"></div>
+          <div class="actions">
+            <button class="btn primary" id="startRound">Joacă o rundă<small>10 întrebări</small></button>
+            <button class="btn gold" id="startRace">Cursa cu ghemul<small>60 de secunde · record <b id="bestRace">0</b></small></button>
+          </div>
+          <div class="actions two">
+            <button class="btn white" id="openShop"><span class="ico-cat"></span>Pisicile mele</button>
+            <button class="btn white" id="openProgress"><svg viewBox="0 0 24 24" fill="none" stroke="#1F2A44" stroke-width="2.6" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Progresul meu</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAY -->
+    <section class="screen" id="scr-play" hidden>
+      <div class="play-grid">
+        <div class="q-side">
+          <div class="progress-dots" id="roundDots"></div>
+          <div class="race" id="raceBar" hidden>
+            <div class="track"><div class="fill" id="raceFill"></div><div class="yarn" id="yarn"></div><div class="runner" id="runner"></div></div>
+            <div class="timer" id="timer">60</div>
+          </div>
+          <div class="q-card card" id="qCard">
+            <div class="q-kind" id="qKind">Înmulțire</div>
+            <div class="q-text"><span id="qA">7</span><span class="op" id="qOp">×</span><span id="qB">8</span><span>=</span><span class="ans" id="ansBox">?</span></div>
+            <div class="feedback" id="feedback"></div>
+            <div class="hint-area" id="hintArea" hidden></div>
+          </div>
+          <div class="cat-row">
+            <div class="mini-cat" id="playCat"></div>
+            <div class="bubble" id="playBubble">Tu poți!</div>
+          </div>
+        </div>
+        <div class="pad-side">
+          <div class="numpad" id="numpad"></div>
+          <div class="pad-extra">
+            <button class="btn gold" id="hintBtn"><span class="ico-paw"></span>Ajutor: arată lăbuțele</button>
+            <button class="btn primary" id="nextBtn" hidden>Am înțeles, mai departe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section class="screen" id="scr-result" hidden>
+      <div class="result card" id="resultCard"></div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="screen" id="scr-shop" hidden>
+      <div class="shop-head">
+        <div class="mini-cat" id="shopCat"></div>
+        <div>
+          <h2>Pisicile mele</h2>
+          <p>Adună peștișori răspunzând corect și adoptă pisicuțe noi. Apoi alege-le accesorii!</p>
+        </div>
+      </div>
+      <h3 class="section-title">Pisicuțe</h3>
+      <div class="grid-cards" id="catGrid"></div>
+      <h3 class="section-title">Accesorii pentru pisica aleasă</h3>
+      <div class="grid-cards" id="accGrid"></div>
+    </section>
+
+    <!-- PROGRESS -->
+    <section class="screen" id="scr-progress" hidden>
+      <div class="prog-grid" id="progTiles"></div>
+      <div class="two-col">
+        <div class="box-card card">
+          <h3>Tabla înmulțirii</h3>
+          <p>Fiecare căsuță se colorează pe măsură ce înveți. Verde înseamnă că o știi foarte bine!</p>
+          <div class="table-wrap" id="mtWrap"></div>
+          <div class="legend">
+            <span><i style="background:#F1F4F8"></i>Încă nu</span>
+            <span><i style="background:var(--pinkS)"></i>Învăț</span>
+            <span><i style="background:var(--goldS)"></i>Aproape</span>
+            <span><i style="background:var(--mintS)"></i>Bine</span>
+            <span><i style="background:var(--mint)"></i>Știu!</span>
+          </div>
+        </div>
+        <div class="box-card card">
+          <h3>Pe table</h3>
+          <p>Cât de bine știi fiecare tablă la înmulțire și la împărțire.</p>
+          <div class="bar-head"><span>Tabla</span><span>× Înmulțire</span><span>: Împărțire</span></div>
+          <div class="bars" id="bars"></div>
+        </div>
+      </div>
+      <div class="box-card card" style="margin-top:18px">
+        <h3>Misiunile mele</h3>
+        <p id="calNote">Zilele în care ai adunat toți peștișorii misiunii sunt verzi.</p>
+        <div class="cal" id="cal"></div>
+      </div>
+      <div class="reset-row">
+        <div class="goal-set" id="goalSet"></div>
+        <div class="reward-set"><label for="realReward">Pentru părinți, recompensa reală pentru o săptămână completă:</label><input id="realReward" maxlength="60" placeholder="de exemplu: o înghețată"></div>
+        <div id="resetRow"></div>
+      </div>
+    </section>
+  </main>
+  <div class="overlay" id="overlay" hidden><div class="ov-card card" id="ovCard"></div></div>
+  <canvas id="confetti"></canvas>
+</div>
+
+<script>
+(function(){
+"use strict";
+const $ = s => document.querySelector(s);
+const INK = "#1F2A44";
+
+/* ---------- icons ---------- */
+const FISH = `<svg viewBox="0 0 34 22" aria-hidden="true"><path d="M3 11c4-7 13-8 20-3l7-5v16l-7-5c-7 5-16 4-20-3z" fill="#FFC940" stroke="${INK}" stroke-width="2.2" stroke-linejoin="round"/><path d="M15 6c1.5 3 1.5 7 0 10" fill="none" stroke="${INK}" stroke-width="1.8" stroke-linecap="round"/><circle cx="8.5" cy="10" r="1.7" fill="${INK}"/></svg>`;
+const PAW = `<svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><ellipse cx="10" cy="13.2" rx="5" ry="4.3"/><circle cx="4.3" cy="8.2" r="2.1"/><circle cx="7.9" cy="4.6" r="2.1"/><circle cx="12.1" cy="4.6" r="2.1"/><circle cx="15.7" cy="8.2" r="2.1"/></svg>`;
+const STAR = (on)=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" fill="${on?'#FFC940':'#E4EAF2'}" stroke="${INK}" stroke-width="1.8" stroke-linejoin="round"/></svg>`;
+const YARN = `<svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="#FF7A8A" stroke="${INK}" stroke-width="2.5"/><path d="M8 14c8 2 16 10 18 20M12 8c8 4 15 12 17 22M6 22c8 0 14 6 16 14M22 4c4 6 10 12 12 22" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".8"/><path d="M34 30c4 3 4 8 0 9" fill="none" stroke="#FF7A8A" stroke-width="2.5" stroke-linecap="round"/></svg>`;
+const SOUND_ON = `<svg viewBox="0 0 24 24" fill="none" stroke="${INK}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z" fill="#FFC940"/><path d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12"/></svg>`;
+const SOUND_OFF = `<svg viewBox="0 0 24 24" fill="none" stroke="${INK}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z" fill="#E4EAF2"/><path d="M17 9l5 6M22 9l-5 6"/></svg>`;
+
+/* ---------- cats ---------- */
+const CATS = [
+  {id:"burrito", m:1, name:"Burrito", price:0, fur:"#2A2C38", dark:"#16171F", belly:"#FFFFFF", paws:"#FFFFFF", whisk:"#FFFFFF", eye:"#D8C95A", pattern:"tuxedo", desc:"Motanul Sofiei, elegant în frac"},
+  {id:"ghemo", name:"Aimee", price:30, fur:"#D8B48E", dark:"#9A6A42", belly:"#F4E3CF", eye:"#6FBF73", pattern:"spots", desc:"Pufoasă și cu buline"},
+  {id:"pufi", name:"Alexandra B.", price:60, fur:"#F7C3CE", dark:"#E48FA2", belly:"#FFE7EC", eye:"#8C6BD1", pattern:"spots", desc:"Roz ca vata de zahăr"},
+  {id:"c_ioana", name:"Ioana", price:90, fur:"#F4E6CF", dark:"#7A5A45", belly:"#FFF6E8", eye:"#4F9FDE", pattern:"spots", desc:"Crem, cu pete ciocolatii"},
+  {id:"c_diana", name:"Diana", price:130, fur:"#F2994A", dark:"#C96F1C", belly:"#FFFFFF", paws:"#FFFFFF", eye:"#6FBF73", pattern:"tuxedo", desc:"Portocalie, cu botic alb"},
+  {id:"c_greta", name:"Greta", price:170, fur:"#9ADBC0", dark:"#5DB592", belly:"#E3F7EE", eye:"#FF7A8A", pattern:"spots", desc:"Verde ca menta"},
+  {id:"c_aida", name:"Aida", price:210, fur:"#CDB8EC", dark:"#9C7FCF", belly:"#F1E9FB", eye:"#FFC940", pattern:"stripes", desc:"Mov ca liliacul"},
+  {id:"fulg", name:"Iulia", price:260, fur:"#FFFFFF", dark:"#DDE3EE", belly:"#FFFFFF", eye:"#5AA9E6", pattern:"none", desc:"Albă ca zăpada"},
+  {id:"mitu", name:"Alexandra V.", price:310, fur:"#F5A35C", dark:"#D9772B", belly:"#FFE6CC", eye:"#7CC35F", pattern:"stripes", desc:"Portocalie, cu dungi"},
+  {id:"tigri", name:"Luna", price:360, fur:"#F9BE3C", dark:"#8C4A12", belly:"#FFE9B0", eye:"#5CB85C", pattern:"stripes", desc:"Curajoasă ca un tigru"},
+  {id:"c_anastasia", name:"Anastasia", price:420, fur:"#7F9CB8", dark:"#5A7894", belly:"#B9CBDC", eye:"#9BE15D", pattern:"none", desc:"Albăstruie și liniștită"},
+  {id:"luna", name:"Sofia", price:480, fur:"#8E94AB", dark:"#5E6480", belly:"#C9CDDB", eye:"#FFC940", pattern:"none", desc:"Gri și visătoare"},
+  {id:"stelu", name:"Maia", price:550, fur:"#FFFFFF", dark:"#DDE3EE", belly:"#FFFFFF", eye:"#E8A33D", pattern:"calico", desc:"Pisica în trei culori"},
+  {id:"taro", m:1, name:"Taro", price:650, fur:"#FBFBFD", dark:"#D9DEE8", belly:"#FFFFFF", eye:"#4DB560", pattern:"none", round:1, wise:1, desc:"Fratele mai mare al lui Burrito, british shorthair"},
+  {id:"aurel", m:1, name:"Gold Taro", price:2000, fur:"#F7C531", dark:"#D99A12", belly:"#FFF1B8", eye:"#4DB560", pattern:"golden", round:1, wise:1, halo:1, special:1, desc:"Taro din aur, cel mai rar motan dintre toți"}
+];
+const ACCS = [
+  {id:"bow",     name:"Fundiță",            price:10},
+  {id:"glasses", name:"Ochelari",           price:20},
+  {id:"scarf",   name:"Fular",              price:30},
+  {id:"hat",     name:"Coif de petrecere",  price:40},
+  {id:"mane",    name:"Coamă de leu",       price:50},
+  {id:"joben",   name:"Joben",              price:60},
+  {id:"duck",    name:"Rățușcă de cauciuc", price:70},
+  {id:"crown",   name:"Coroană",            price:80},
+  {id:"bowtie",  name:"Papion auriu",       price:0, prize:1},
+  {id:"flower",  name:"Floricică",          price:0, prize:2},
+  {id:"stars",   name:"Coroniță de stele",  price:0, prize:3},
+  {id:"cape",    name:"Pelerină de erou",   price:0, prize:4}
+];
+const catById = id => CATS.find(c=>c.id===id) || CATS[0];
+
+function catSVG(c, mood, wear){
+  mood = mood || "normal";
+  const L = INK, sw = 3.5, W = c.whisk || INK, paw = c.paws || c.fur;
+  const hx = c.round ? 61 : 54, hy = c.round ? 48 : 46, bx = c.round ? 54 : 48;
+  const ears = c.round
+    ? {l:"60,78 67,34 95,54", r:"140,78 133,34 105,54", li:"68,68 70,44 87,57", ri:"132,68 130,44 113,57"}
+    : {l:"52,80 58,22 98,50", r:"148,80 142,22 102,50", li:"61,66 64,36 85,52", ri:"139,66 136,36 115,52"};
+  let bodyPat = "", headPat = "";
+  if (c.pattern === "stripes"){
+    headPat = `<g stroke="${c.dark}" stroke-width="5" stroke-linecap="round" fill="none"><path d="M100 46v13"/><path d="M86 48l3 11"/><path d="M114 48l-3 11"/><path d="M50 84h10"/><path d="M150 84h-10"/></g>`;
+    bodyPat = `<g stroke="${c.dark}" stroke-width="5" stroke-linecap="round" fill="none"><path d="M57 140q8 5 6 15"/><path d="M143 140q-8 5-6 15"/><path d="M55 160q8 4 6 13"/><path d="M145 160q-8 4-6 13"/></g>`;
+  } else if (c.pattern === "spots"){
+    headPat = `<circle cx="132" cy="66" r="9" fill="${c.dark}"/><circle cx="70" cy="62" r="5" fill="${c.dark}"/>`;
+    bodyPat = `<circle cx="66" cy="150" r="7" fill="${c.dark}"/><circle cx="136" cy="164" r="8" fill="${c.dark}"/><circle cx="130" cy="138" r="5" fill="${c.dark}"/>`;
+  } else if (c.pattern === "tuxedo"){
+    headPat = `<path d="M100 66C93 78 68 92 70 112C74 132 126 132 130 112C132 92 107 78 100 66Z" fill="#FFFFFF"/>`;
+  } else if (c.pattern === "golden"){
+    const sp = (x,y,z)=>`<path d="M${x} ${y-z}Q${x} ${y} ${x+z} ${y}Q${x} ${y} ${x} ${y+z}Q${x} ${y} ${x-z} ${y}Q${x} ${y} ${x} ${y-z}Z" fill="#FFFFFF"/>`;
+    headPat = `<ellipse cx="82" cy="60" rx="16" ry="7" fill="#FFE27A" opacity=".9"/>` + sp(128,62,7) + sp(66,70,5);
+    bodyPat = `<ellipse cx="78" cy="136" rx="10" ry="6" fill="#FFE27A" opacity=".9"/>` + sp(134,150,8) + sp(66,164,5) + sp(122,176,4);
+  } else if (c.pattern === "calico"){
+    headPat = `<ellipse cx="74" cy="70" rx="17" ry="14" fill="#F2994A"/><ellipse cx="130" cy="64" rx="13" ry="11" fill="#3A3D4D"/>`;
+    bodyPat = `<ellipse cx="130" cy="150" rx="14" ry="18" fill="#3A3D4D"/><ellipse cx="70" cy="166" rx="12" ry="11" fill="#F2994A"/>`;
+  }
+  const earL = c.pattern==="calico" ? "#F2994A" : c.fur;
+  const earR = c.pattern==="calico" ? "#3A3D4D" : c.fur;
+  const tailCol = c.pattern==="calico" ? "#F2994A" : c.fur;
+  let eyes, mouth, extra = "";
+  const eye = (x)=>`<ellipse cx="${x}" cy="88" rx="10" ry="12" fill="${c.eye}" stroke="${L}" stroke-width="3"/><ellipse cx="${x}" cy="89.5" rx="4.5" ry="9" fill="${L}"/><circle cx="${x+3.5}" cy="83" r="3" fill="#fff"/>`;
+  if (mood === "happy"){
+    eyes = `<g fill="none" stroke="${L}" stroke-width="4.5" stroke-linecap="round"><path d="M70 91q10-13 20 0"/><path d="M110 91q10-13 20 0"/></g>`;
+    mouth = `<path d="M90 110q10 16 20 0z" fill="#C2485A" stroke="${L}" stroke-width="3" stroke-linejoin="round"/>`;
+  } else if (mood === "oops"){
+    eyes = `<ellipse cx="80" cy="88" rx="10" ry="12" fill="${c.eye}" stroke="${L}" stroke-width="3"/><circle cx="80" cy="90" r="6.5" fill="${L}"/><circle cx="83" cy="86" r="2.4" fill="#fff"/><ellipse cx="120" cy="88" rx="10" ry="12" fill="${c.eye}" stroke="${L}" stroke-width="3"/><circle cx="120" cy="90" r="6.5" fill="${L}"/><circle cx="123" cy="86" r="2.4" fill="#fff"/><g stroke="${W}" stroke-width="3.5" stroke-linecap="round"><path d="M70 72l14 4"/><path d="M130 72l-14 4"/></g>`;
+    mouth = `<ellipse cx="100" cy="116" rx="4.5" ry="5" fill="#C2485A" stroke="${L}" stroke-width="3"/>`;
+    extra = `<path d="M156 52q7 11 0 15q-7-4 0-15z" fill="#8FD0F5" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/>`;
+  } else {
+    eyes = eye(80) + eye(120);
+    if (c.wise) eyes += `<path d="M68.5 85Q80 70 91.5 85Z" fill="${c.fur}" stroke="${L}" stroke-width="3" stroke-linejoin="round"/><path d="M108.5 85Q120 70 131.5 85Z" fill="${c.fur}" stroke="${L}" stroke-width="3" stroke-linejoin="round"/>`;
+    mouth = `<path d="M100 107q0 7-7 7M100 107q0 7 7 7" fill="none" stroke="${L}" stroke-width="3" stroke-linecap="round"/>`;
+  }
+  let acc = "";
+  if (wear === "bow") acc = `<g transform="translate(136 50) rotate(18)"><path d="M0 0L-19-12v24z" fill="#FF7A8A" stroke="${L}" stroke-width="3" stroke-linejoin="round"/><path d="M0 0l19-12v24z" fill="#FF7A8A" stroke="${L}" stroke-width="3" stroke-linejoin="round"/><circle r="5.5" fill="#FF9DAA" stroke="${L}" stroke-width="3"/></g>`;
+  if (wear === "glasses") acc = `<g stroke="${L}" stroke-width="4" fill="rgba(255,255,255,.18)"><circle cx="80" cy="88" r="16"/><circle cx="120" cy="88" r="16"/><path d="M96 86q4-4 8 0" fill="none"/><path d="M64 86l-10-4M136 86l10-4" fill="none"/></g>`;
+  if (wear === "scarf") acc = `<path d="M56 124q44 22 88 0l3 13q-47 25-94 0z" fill="#23A970" stroke="${L}" stroke-width="3.2" stroke-linejoin="round"/><path d="M116 140l8 36 13-4-6-35z" fill="#23A970" stroke="${L}" stroke-width="3.2" stroke-linejoin="round"/><path d="M119 152l12-3M122 164l12-3" stroke="#FFC940" stroke-width="3"/>`;
+  if (wear === "hat") acc = `<path d="M78 48L101 2l23 46z" fill="#4F9FDE" stroke="${L}" stroke-width="3.5" stroke-linejoin="round"/><path d="M88 28l24 0M84 38l32 0" stroke="#FFC940" stroke-width="4" stroke-linecap="round"/><circle cx="101" cy="4" r="7" fill="#FF7A8A" stroke="${L}" stroke-width="3"/>`;
+  if (wear === "joben") acc = `<g transform="rotate(-7 100 46)"><rect x="76" y="2" width="48" height="44" rx="4" fill="#1B1C24" stroke="${L}" stroke-width="3.5"/><rect x="76" y="31" width="48" height="8" fill="#FF7A8A"/><path d="M83 8v20" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".3"/><ellipse cx="100" cy="47" rx="38" ry="7" fill="#1B1C24" stroke="${L}" stroke-width="3.5"/></g>`;
+  if (wear === "duck") acc = `<g transform="translate(-42 -24) scale(1.42)"><path d="M84 44q-2-14 12-18 20-4 32 6 6-6 8-2 2 8-6 12-8 10-28 10-14 0-18-8z" fill="#FFD43B" stroke="${L}" stroke-width="3" stroke-linejoin="round"/><circle cx="90" cy="22" r="11" fill="#FFD43B" stroke="${L}" stroke-width="3"/><path d="M79 22q-9 1-9 5 5 2 10-1z" fill="#F7862F" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/><circle cx="88" cy="19" r="2.2" fill="${L}"/><path d="M104 34q10 0 14 7" fill="none" stroke="#E0A800" stroke-width="3" stroke-linecap="round"/></g>`;
+  if (wear === "bowtie") acc = `<g transform="translate(100 130)"><path d="M0 0L-22-12v24z" fill="#FFC940" stroke="${L}" stroke-width="3" stroke-linejoin="round"/><path d="M0 0l22-12v24z" fill="#FFC940" stroke="${L}" stroke-width="3" stroke-linejoin="round"/><circle r="6" fill="#F2A900" stroke="${L}" stroke-width="3"/><path d="M-15-4l-4 1M15-4l4 1" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/></g>`;
+  if (wear === "flower") acc = `<g transform="translate(66 50)">${[0,72,144,216,288].map(a=>`<ellipse cx="0" cy="-10" rx="7" ry="10" transform="rotate(${a})" fill="#FF9DB8" stroke="${L}" stroke-width="2.5"/>`).join("")}<circle r="6.5" fill="#FFC940" stroke="${L}" stroke-width="2.5"/></g>`;
+  if (wear === "stars") acc = `<path d="M${100-hx+8} 60Q100 ${36-(hy-46)} ${100+hx-8} 60" fill="none" stroke="#4F9FDE" stroke-width="6" stroke-linecap="round"/>${[[72,46],[100,34],[128,46]].map(([x,y],i)=>`<path d="M${x} ${y-11}l3.2 6.6 7.3 1-5.3 5.1 1.3 7.2-6.5-3.4-6.5 3.4 1.3-7.2-5.3-5.1 7.3-1z" fill="${i===1?"#FFC940":"#FF7A8A"}" stroke="${L}" stroke-width="2.2" stroke-linejoin="round"/>`).join("")}`;
+  if (wear === "crown") acc = `<path d="M72 48V18l14 14 14-22 14 22 14-14v30z" fill="#FFC940" stroke="${L}" stroke-width="3.5" stroke-linejoin="round"/><circle cx="100" cy="36" r="4.5" fill="#FF7A8A" stroke="${L}" stroke-width="2"/><circle cx="84" cy="40" r="3" fill="#4F9FDE"/><circle cx="116" cy="40" r="3" fill="#4F9FDE"/>`;
+  let mane = "";
+  if (wear === "mane"){
+    const R = hx + 10, n = 16;
+    let tufts = "";
+    for (let i=0;i<n;i++){ const a = i/n*Math.PI*2; tufts += `<circle cx="${(100+Math.cos(a)*R).toFixed(1)}" cy="${(90+Math.sin(a)*(hy+10)).toFixed(1)}" r="17" fill="${i%2?"#E0892B":"#C96F1C"}" stroke="${L}" stroke-width="3"/>`; }
+    mane = tufts + `<ellipse cx="100" cy="90" rx="${R}" ry="${hy+10}" fill="#E0892B"/>`;
+  }
+  const halo = c.halo ? `<circle cx="100" cy="112" r="102" fill="#FFE27A" opacity=".35"/><circle cx="100" cy="112" r="84" fill="#FFE27A" opacity=".3"/><path d="M18 40l3 8 8 3-8 3-3 8-3-8-8-3 8-3zM184 30l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5zM186 170l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#FFC940" stroke="${L}" stroke-width="1.5" stroke-linejoin="round"/>` : "";
+  return `<svg viewBox="-6 -8 212 214" width="100%" height="100%" aria-hidden="true">${halo}
+    <path d="M138 176C184 178 190 128 166 106" fill="none" stroke="${L}" stroke-width="19" stroke-linecap="round"/>
+    <path d="M138 176C184 178 190 128 166 106" fill="none" stroke="${tailCol}" stroke-width="12" stroke-linecap="round"/>
+    ${wear==="cape" ? `<path d="M60 116Q100 132 140 116L162 196Q100 210 38 196Z" fill="#E5484D" stroke="${L}" stroke-width="3.5" stroke-linejoin="round"/><path d="M60 116Q100 132 140 116" fill="none" stroke="#FFC940" stroke-width="6"/>` : ""}
+    <ellipse cx="100" cy="152" rx="${bx}" ry="40" fill="${c.fur}" stroke="${L}" stroke-width="${sw}"/>
+    <ellipse cx="100" cy="162" rx="25" ry="26" fill="${c.belly}"/>
+    ${bodyPat}
+    <ellipse cx="80" cy="191" rx="14" ry="9" fill="${paw}" stroke="${L}" stroke-width="${sw}"/>
+    <ellipse cx="120" cy="191" rx="14" ry="9" fill="${paw}" stroke="${L}" stroke-width="${sw}"/>
+    ${wear==="mane" ? mane : ""}
+    <polygon points="${ears.l}" fill="${earL}" stroke="${L}" stroke-width="${sw}" stroke-linejoin="round"/>
+    <polygon points="${ears.r}" fill="${earR}" stroke="${L}" stroke-width="${sw}" stroke-linejoin="round"/>
+    <polygon points="${ears.li}" fill="#FFB3C0"/>
+    <polygon points="${ears.ri}" fill="#FFB3C0"/>
+    <ellipse cx="100" cy="88" rx="${hx}" ry="${hy}" fill="${c.fur}" stroke="${L}" stroke-width="${sw}"/>
+    ${headPat}
+    <circle cx="68" cy="106" r="8" fill="#FF7A8A" opacity=".4"/>
+    <circle cx="132" cy="106" r="8" fill="#FF7A8A" opacity=".4"/>
+    ${eyes}
+    <path d="M94 100h12l-6 7z" fill="#FF8FA0" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/>
+    ${mouth}
+    <g stroke="${W}" stroke-width="2.4" stroke-linecap="round" opacity=".8"><path d="M64 102l-26-6M64 110l-26 2M136 102l26-6M136 110l26 2"/></g>
+    ${extra}${acc}
+  </svg>`;
+}
+
+/* ---------- storage ---------- */
+const KEY = "pisicutele-sofiei-v1";
+const DEF = {fish:0, correct:0, owned:["burrito"], active:"burrito", ownedAcc:[], wear:null, facts:{}, best:0, op:"mul", tables:[2,3,4,5], sound:true, days:[], rounds:0, goal:50, dayFish:{}, goalDays:[], streak:{count:0,last:null}, fixedDays:[], weeksWon:[], giftDay:null, realReward:""};
+function clone(o){ return JSON.parse(JSON.stringify(o)); }
+function load(){
+  try{ const r = JSON.parse(localStorage.getItem(KEY)); if (r && typeof r === "object") return Object.assign(clone(DEF), r); }catch(e){}
+  return clone(DEF);
+}
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+let S = load();
+if (!Array.isArray(S.tables) || !S.tables.length) S.tables = [2,3,4,5];
+if (S.owned.includes("cleo")){ S.owned = S.owned.map(x=>x==="cleo"?"taro":x); if (S.active==="cleo") S.active="taro"; save(); }
+if (!S.dayFish || typeof S.dayFish!=="object") S.dayFish = {};
+if (!Array.isArray(S.goalDays)) S.goalDays = [];
+if (!S.goal) S.goal = 50;
+if (!Array.isArray(S.fixedDays)) S.fixedDays = [];
+if (!Array.isArray(S.weeksWon)) S.weeksWon = [];
+if (!S.streak || typeof S.streak !== "object" || S.streak.count === undefined){
+  const k = d => d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+  const d = new Date(); let n = 0, last = null;
+  if (!S.goalDays.includes(k(d))) d.setDate(d.getDate()-1);
+  while (S.goalDays.includes(k(d))){ if (!last) last = k(d); n++; d.setDate(d.getDate()-1); }
+  S.streak = {count:n, last:last};
+}
+if (!S.owned.includes("burrito")){ S.owned.unshift("burrito"); if (S.active === "mitu" && S.owned.filter(x=>x==="mitu").length && !S.boughtMitu){ S.owned = S.owned.filter(x=>x!=="mitu"); S.active = "burrito"; } save(); }
+
+function today(){ const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function markDay(){ const t=today(); if (!S.days.includes(t)){ S.days.push(t); if (S.days.length>400) S.days.shift(); } }
+
+/* ---------- sound ---------- */
+let AC = null;
+function ac(){
+  if (!AC){ try{ AC = new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ AC = null; } }
+  if (AC && AC.state === "suspended") AC.resume();
+  return AC;
+}
+function tone(freqs, dur, type, vol, delay){
+  if (!S.sound) return; const a = ac(); if (!a) return;
+  const t = a.currentTime + (delay||0);
+  const o = a.createOscillator(), g = a.createGain();
+  o.type = type || "triangle";
+  o.frequency.setValueAtTime(freqs[0], t);
+  for (let i=1;i<freqs.length;i++) o.frequency.linearRampToValueAtTime(freqs[i], t + dur*i/(freqs.length-1));
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.exponentialRampToValueAtTime(vol||0.15, t+0.03);
+  g.gain.exponentialRampToValueAtTime(0.0001, t+dur);
+  o.connect(g); g.connect(a.destination); o.start(t); o.stop(t+dur+0.05);
+}
+const SND = {
+  meow(){ tone([620,940,820,520], .5, "triangle", .17); tone([1240,1880,1640,1040], .5, "sine", .03); },
+  boop(){ tone([330,230], .32, "sine", .16); },
+  tap(){ tone([880], .05, "sine", .05); },
+  coin(){ tone([988], .08, "square", .05); tone([1319], .16, "square", .05, .08); },
+  purr(){
+    if (!S.sound) return; const a = ac(); if (!a) return;
+    const t = a.currentTime, o = a.createOscillator(), g = a.createGain(), lfo = a.createOscillator(), lg = a.createGain(), f = a.createBiquadFilter();
+    o.type = "sawtooth"; o.frequency.value = 58; f.type = "lowpass"; f.frequency.value = 420;
+    lfo.frequency.value = 24; lg.gain.value = 0.07; g.gain.value = 0.0001;
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.09, t+0.12); g.gain.setValueAtTime(0.09, t+0.8); g.gain.exponentialRampToValueAtTime(0.0001, t+1.2);
+    lfo.connect(lg); lg.connect(g.gain); o.connect(f); f.connect(g); g.connect(a.destination);
+    o.start(t); lfo.start(t); o.stop(t+1.25); lfo.stop(t+1.25);
+  },
+  fanfare(){ [523,659,784,1047].forEach((f,i)=>tone([f], .22, "triangle", .13, i*.13)); tone([1047,1319], .5, "triangle", .1, .55); }
+};
+
+/* ---------- facts & tips ---------- */
+const mulKey = (a,b)=>"m"+Math.min(a,b)+"x"+Math.max(a,b);
+const divKey = (p,d)=>"d"+p+"/"+d;
+const box = k => (S.facts[k] && S.facts[k].b) || 0;
+
+function makeFact(kind,t,n){
+  if (kind === "mul"){
+    const sw = Math.random()<0.5; const a = sw?n:t, b = sw?t:n;
+    return {kind, a, b, ans:a*b, key:mulKey(a,b)};
+  }
+  return {kind:"div", a:t*n, b:t, ans:n, key:divKey(t*n,t)};
+}
+function pool(){
+  const kinds = S.op==="mix" ? ["mul","div"] : [S.op];
+  const out = [];
+  for (const t of S.tables) for (let n=1;n<=10;n++) for (const k of kinds) out.push([k,t,n]);
+  return out;
+}
+function pick(recent){
+  const P = pool();
+  const w = P.map(([k,t,n])=>{
+    const key = k==="mul" ? mulKey(t,n) : divKey(t*n,t);
+    let x = Math.pow(6 - box(key), 2);
+    if (t===1 || n===1) x *= 0.4;
+    if (n===10 && t!==10) x *= 0.6;
+    if (recent.includes(key)) x *= 0.01;
+    return x;
+  });
+  let sum = w.reduce((a,b)=>a+b,0), r = Math.random()*sum;
+  for (let i=0;i<P.length;i++){ r -= w[i]; if (r<=0) return makeFact(...P[i]); }
+  return makeFact(...P[P.length-1]);
+}
+function tipFor(f){
+  if (f.kind === "div"){
+    if (f.b === 1) return `Împărțit la 1, numărul rămâne la fel: ${f.a} : 1 = ${f.ans}.`;
+    if (f.b === 10) return `La 10 e ușor: tai zeroul de la sfârșit. ${f.a} : 10 = ${f.ans}.`;
+    return `Gândește înmulțirea: ${f.b} × ? = ${f.a}. Pentru că ${f.b} × ${f.ans} = ${f.a}, răspunsul este ${f.ans}.`;
+  }
+  const x = Math.min(f.a,f.b), y = Math.max(f.a,f.b), p = x*y;
+  if (x === 1) return `Orice număr înmulțit cu 1 rămâne la fel: ${y} × 1 = ${y}.`;
+  if (y === 10) return `Cu 10 e ușor: pui un 0 la sfârșit. ${x} × 10 = ${p}.`;
+  if (x === 7 && y === 8) return `Ține minte șirul 5, 6, 7, 8: adică 56 = 7 × 8.`;
+  if (x === 2) return `Înmulțirea cu 2 înseamnă dublul: ${y} + ${y} = ${p}.`;
+  if (y === 9) return `Truc cu 9: ${x} × 10 = ${x*10}, apoi scazi ${x}. ${x*10} − ${x} = ${p}.`;
+  if (x === 5 || y === 5){ const o = x===5?y:x; return `La 5 e jumătate din 10: ${o} × 10 = ${o*10}, jumătate este ${p}.`; }
+  if (x === 4 || y === 4){ const o = x===4?y:x; return `Cu 4 dublezi de două ori: ${o} → ${o*2} → ${p}.`; }
+  if (x === 3){ return `Adună de trei ori: ${y} + ${y} + ${y} = ${p}.`; }
+  if (x === y) return `${x} × ${x} face un pătrat: ${x} rânduri a câte ${x}. Rezultatul este ${p}.`;
+  return `Împarte în bucăți: ${y} × 5 = ${y*5}, plus ${y} × ${x-5} = ${y*(x-5)}. Împreună fac ${p}.`;
+}
+
+/* ---------- ui helpers ---------- */
+const screens = ["home","play","result","shop","progress"];
+let current = "home";
+function show(name){
+  screens.forEach(s=>{ $("#scr-"+s).hidden = s!==name; });
+  current = name;
+  $("#homeBtn").hidden = name==="home";
+  if (name!=="play") stopTimer();
+  if (name==="home") renderHome();
+  if (name==="shop") renderShop();
+  if (name==="progress") renderProgress();
+  $("#scr-"+name).scrollTop = 0;
+}
+function renderFish(pop){
+  $("#fishCount").textContent = S.fish;
+  if (pop){ const p=$("#fishPill"); p.classList.remove("pop"); void p.offsetWidth; p.classList.add("pop"); }
+}
+function renderSound(){ $("#soundBtn").innerHTML = S.sound ? SOUND_ON : SOUND_OFF; }
+function anim(el, cls){ el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+const rnd = arr => arr[Math.floor(Math.random()*arr.length)];
+function flyFish(n, fromEl){
+  const r = fromEl.getBoundingClientRect();
+  const d = document.createElement("div");
+  d.className = "float-fish"; d.innerHTML = "+"+n+FISH;
+  d.style.left = (r.left + r.width/2 - 30)+"px"; d.style.top = (r.top - 10)+"px";
+  document.body.appendChild(d); setTimeout(()=>d.remove(), 1050);
+}
+
+/* ---------- daily mission ---------- */
+const MEDAL = `<svg viewBox="0 0 40 48" aria-hidden="true"><path d="M10 2h8l6 16h-8zM30 2h-8l-6 16h8z" fill="#4F9FDE" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><circle cx="20" cy="31" r="14" fill="#FFC940" stroke="${INK}" stroke-width="2.5"/><path d="M20 23l2.4 5 5.4.7-4 3.7 1 5.3-4.8-2.6-4.8 2.6 1-5.3-4-3.7 5.4-.7z" fill="#fff" stroke="${INK}" stroke-width="1.4" stroke-linejoin="round"/></svg>`;
+const todayFish = () => S.dayFish[today()] || 0;
+const goalDone = () => S.goalDays.includes(today());
+function addFish(n){
+  S.fish += n; if (G) G.fish += n;
+  const t = today();
+  S.dayFish[t] = (S.dayFish[t]||0) + n;
+  const keys = Object.keys(S.dayFish).sort(); while (keys.length > 70) delete S.dayFish[keys.shift()];
+  if (!S.goalDays.includes(t) && S.dayFish[t] >= S.goal){ S.goalDays.push(t); if (G) G.goalJustDone = true; streakDay(); }
+  renderGoal();
+}
+function renderGoal(){
+  const f = todayFish(), g = S.goal, done = goalDone();
+  $("#gpText").textContent = Math.min(f,g) + "/" + g;
+  $("#gpFill").style.width = Math.min(100, f/g*100) + "%";
+  $("#goalPill").classList.toggle("done", done);
+  renderStreak();
+}
+/* ---------- streak ---------- */
+const FLAME = `<svg viewBox="0 0 28 30" aria-hidden="true"><path d="M14 2c1.5 5 9 7.5 9 16a9 9 0 01-18 0c0-4.5 2.5-7 4-9.5.3 3 1.5 4.5 3 5-.5-4.5 0-8 2-11.5z" fill="#FF8A3D" stroke="${INK}" stroke-width="2.2" stroke-linejoin="round"/><path d="M14 14c1 3 4.5 4 4.5 8a4.5 4.5 0 01-9 0c0-2.5 1.5-4 2.5-5 .3 1.5 1 2 2 2.3 0-2.2-.5-3.5 0-5.3z" fill="#FFC940"/></svg>`;
+const keyOf = d => d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const dateOf = k => { const [y,m,d] = k.split("-").map(Number); return new Date(y, m-1, d); };
+const dayDiff = (a,b) => Math.round((dateOf(b) - dateOf(a)) / 86400000);
+function renderStreak(){
+  const st = S.streak, lit = st.last === today();
+  $("#streakFlame").innerHTML = FLAME;
+  $("#streakNum").textContent = st.count;
+  $("#streakLbl").textContent = st.count===1 ? "zi" : "zile";
+  $("#streakPill").classList.toggle("lit", lit);
+}
+function streakDay(){
+  const st = S.streak, t = today();
+  if (st.last === t) return;
+  st.count = (st.last && dayDiff(st.last, t) === 1) ? st.count + 1 : 1;
+  st.last = t;
+  S.fish += 5; if (G) G.streakBonus = 5;
+  weeklyCheck();
+  renderStreak(); renderFish(true);
+}
+function mondayOf(d){ const m = new Date(d); m.setHours(0,0,0,0); m.setDate(m.getDate() - ((m.getDay()+6)%7)); return m; }
+function weekDays(){ const m = mondayOf(new Date()); return Array.from({length:7}, (_,i)=>{ const d = new Date(m); d.setDate(m.getDate()+i); return keyOf(d); }); }
+const dayOk = k => S.goalDays.includes(k) || S.fixedDays.includes(k);
+function weeklyCheck(){
+  const now = new Date(); if (now.getDay() !== 0) return;
+  const days = weekDays(); if (!days.every(dayOk)) return;
+  const wk = days[0]; if (S.weeksWon.includes(wk)) return;
+  S.weeksWon.push(wk);
+  const n = S.weeksWon.length;
+  const prize = ACCS.find(a=>a.prize===n);
+  S.fish += 30;
+  if (prize && !S.ownedAcc.includes(prize.id)) S.ownedAcc.push(prize.id);
+  if (G) G.weekWin = {n, prize: prize ? prize.id : null};
+}
+function renderWeekRow(){
+  const days = weekDays(), t = today(), names = ["L","M","M","J","V","S","D"];
+  const past = k => dayDiff(k, t) > 0;
+  let broken = false;
+  const cells = days.map((k,i)=>{
+    let c = "wd" + (i===6?" sun":"");
+    if (S.goalDays.includes(k)) c += " done"; else if (S.fixedDays.includes(k)) c += " fix"; else if (past(k)){ c += " miss"; broken = true; }
+    if (k===t) c += " today";
+    return `<span class="${c}">${names[i]}</span>`;
+  }).join("");
+  const won = S.weeksWon.includes(days[0]);
+  const rr = (S.realReward||"").trim();
+  const txt = won ? `Săptămână completă! Ai primit premiul${rr?` și: <b>${rr}</b>`:""}.`
+    : broken ? `Săptămâna asta s-a întrerupt. Săptămâna viitoare încerci din nou!`
+    : `O săptămână completă, de luni până duminică, aduce un premiu special${rr?` și <b>${rr}</b>`:""}!`;
+  return `<div class="week-row">${cells}<span class="wtxt">${txt}</span></div>`;
+}
+const WEEK_TABLES = [7,8,6,9,4,3];
+function weekTable(){ const m = mondayOf(new Date()); const w = Math.floor((m.getTime() + 4*864e5) / (7*864e5)); return WEEK_TABLES[w % WEEK_TABLES.length]; }
+function isWeekFact(f){ const T = weekTable(); return f.kind==="mul" ? (f.a===T || f.b===T) : (f.b===T || f.ans===T); }
+const GIFT = `<svg viewBox="0 0 70 70" aria-hidden="true"><rect x="10" y="30" width="50" height="34" rx="4" fill="#FF7A8A" stroke="${INK}" stroke-width="3"/><rect x="6" y="20" width="58" height="13" rx="3" fill="#FF9DAA" stroke="${INK}" stroke-width="3"/><rect x="31" y="20" width="8" height="44" fill="#FFC940" stroke="${INK}" stroke-width="2.5"/><path d="M35 20c-6-12-20-12-18-4 2 6 12 4 18 4zM35 20c6-12 20-12 18-4-2 6-12 4-18 4z" fill="#FFC940" stroke="${INK}" stroke-width="2.5" stroke-linejoin="round"/></svg>`;
+function giftBlock(){
+  if (S.giftDay === today()) return "";
+  return `<button class="gift wiggle" id="giftBtn">${GIFT}<span><b>Cutia-surpriză a zilei!</b><br>Atinge ca s-o deschizi.</span></button>`;
+}
+function wireGift(){
+  const g = $("#giftBtn"); if (!g) return;
+  g.onclick = ()=>{
+    if (S.giftDay === today()) return;
+    S.giftDay = today();
+    const cheap = ACCS.filter(a=>!a.prize && a.price<=40 && !S.ownedAcc.includes(a.id));
+    let msg;
+    if (cheap.length && Math.random() < 0.12){
+      const a = rnd(cheap); S.ownedAcc.push(a.id);
+      msg = `<b>Wow! Un accesoriu: ${a.name}!</b><br>Îl găsești la Pisicile mele.`;
+    } else {
+      const n = rnd([3,4,5,5,5,6,6,8,10]);
+      addFish(n); renderFish(true);
+      msg = `<b>+${n} peștișori!</b><br>${catById(S.active).name} ți-a pregătit o surpriză.`;
+    }
+    save(); SND.fanfare(); confetti();
+    g.classList.remove("wiggle"); g.classList.add("opened");
+    g.innerHTML = `${GIFT}<span>${msg}</span>`;
+  };
+}
+function weekWinBlock(){
+  if (!G || !G.weekWin) return "";
+  const pr = G.weekWin.prize ? ACCS.find(a=>a.id===G.weekWin.prize) : null;
+  const rr = (S.realReward||"").trim();
+  return `<div class="mission-win" style="background:var(--goldS)"><div class="mc">${catSVG(catById(S.active),"happy",pr?pr.id:S.wear)}</div>
+    <div><h3>Săptămână completă!</h3><p>Ai exersat în fiecare zi, de luni până duminică. Primești +30 de peștișori${pr?` și accesoriul special <b>${pr.name}</b>`:""}!${rr?`<br><b>Și ai câștigat: ${rr}!</b> Arată-i mamei acest mesaj.`:""}</p></div></div>`;
+}
+function checkStreak(){
+  const st = S.streak;
+  if (!st.count || !st.last || !$("#overlay").hidden) return;
+  const gap = dayDiff(st.last, today());
+  if (gap <= 1) return;
+  const missed = gap - 1, cost = 5 * missed, canPay = S.fish >= cost;
+  const cat = catById(S.active);
+  const zile = missed===1 ? "o zi" : missed + " zile";
+  $("#ovCard").innerHTML = `<div class="mini-cat">${catSVG(cat,"oops",S.wear)}</div>
+    <h2>Ai ratat ${zile}!</h2>
+    <p>Aveai o serie de <b>${st.count} ${st.count===1?"zi":"zile"}</b> la rând. ${canPay
+      ? `Poți s-o salvezi dând <b>${cost} peștișori</b>. Ai ${S.fish}.`
+      : `Pentru a o salva îți trebuiau ${cost} peștișori, dar ai doar ${S.fish}. Nu-i nimic, azi începi din nou de la ziua 1!`}</p>
+    <div class="actions">${canPay
+      ? `<button class="btn gold" id="ovSave">Salvez seria (${cost} peștișori)</button><button class="btn white" id="ovReset">Încep de la ziua 1</button>`
+      : `<button class="btn primary" id="ovReset" style="grid-column:1/-1">Bine, încep din nou!</button>`}</div>`;
+  $("#overlay").hidden = false;
+  if (canPay) $("#ovSave").onclick = ()=>{
+    S.fish -= cost;
+    for (let i=1;i<=missed;i++){ const d = dateOf(st.last); d.setDate(d.getDate()+i); S.fixedDays.push(keyOf(d)); }
+    const y = new Date(); y.setDate(y.getDate()-1); st.last = keyOf(y);
+    save(); $("#overlay").hidden = true; SND.coin(); confetti(); renderFish(true); renderHome();
+  };
+  $("#ovReset").onclick = ()=>{ st.count = 0; st.last = null; save(); $("#overlay").hidden = true; SND.tap(); renderHome(); };
+}
+function missionStreak(){
+  let n = 0; const d = new Date();
+  if (!goalDone()) d.setDate(d.getDate()-1);
+  while (true){
+    const k = d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+    if (S.goalDays.includes(k)){ n++; d.setDate(d.getDate()-1); } else break;
+  }
+  return n;
+}
+function renderMission(){
+  const f = todayFish(), g = S.goal, done = goalDone(), left = Math.max(0, g-f);
+  const taro = catById("taro"), streak = missionStreak();
+  const m = $("#mission"); m.classList.toggle("done", done);
+  m.innerHTML = `<div class="mc">${catSVG(taro, done?"happy":"normal", null)}${done?`<div class="medal">${MEDAL}</div>`:""}</div>
+    <div class="mission-body">
+      <h3>${done ? "Misiune îndeplinită!" : `Misiunea de azi: ${g} de peștișori`}</h3>
+      <div class="big-bar"><i style="width:${Math.min(100,f/g*100)}%"></i><span>${Math.min(f,g)} din ${g}</span></div>
+      <p>${done ? `Taro îți dă medalia zilei. Poți să te mai joci sau să iei o pauză.` : f===0 ? `Taro, motanul cel mare, te așteaptă cu o medalie.` : `Mai ai ${left}. Taro te așteaptă cu medalia!`}${!done && S.streak.count>0 ? ` Termină misiunea ca să-ți păstrezi seria de ${S.streak.count} ${S.streak.count===1?"zi":"zile"}!` : ""}${done ? ` Seria ta: ${S.streak.count} ${S.streak.count===1?"zi":"zile"} la rând.` : ""}</p>
+      ${renderWeekRow()}
+    </div>`;
+}
+function missionResultBlock(){
+  if (G && G.goalJustDone){
+    const taro = catById("taro");
+    return `<div class="mission-win"><div class="mc">${catSVG(taro,"happy",null)}<div class="medal">${MEDAL}</div></div>
+      <div><h3>Misiune îndeplinită!</h3><p>Ai adunat ${S.goal} de peștișori azi. Taro și ${catById(S.active).name} sunt mândri de tine. Primești medalia zilei!</p><p><b>Seria ta: ${S.streak.count} ${S.streak.count===1?"zi":"zile"} la rând. Bonus: +5 peștișori!</b></p></div></div>`;
+  }
+  if (goalDone()) return "";
+  const left = Math.max(0, S.goal - todayFish());
+  return `<div class="mission-note">Misiunea de azi: ${Math.min(todayFish(),S.goal)} din ${S.goal} peștișori. Mai ai ${left}!</div>`;
+}
+
+/* ---------- cat house & petting ---------- */
+const HEART = `<svg viewBox="0 0 34 30" aria-hidden="true"><path d="M17 28S2 19 2 9.5A7.5 7.5 0 0117 6a7.5 7.5 0 0115 3.5C32 19 17 28 17 28z" fill="#FF7A8A" stroke="${INK}" stroke-width="2.2" stroke-linejoin="round"/><circle cx="10" cy="10" r="2.5" fill="#fff" opacity=".7"/></svg>`;
+const PET_MSG = ["Prrr... îmi place!","Mai mângâie-mă puțin!","Miau! Te iubesc, Sofia!","Toarc, toarc...","Ce mâini blânde ai!","Prrr... sunt cea mai fericită pisică!"];
+const PET_MSG_M = ["Prrr... îmi place!","Mai mângâie-mă puțin!","Miau! Te iubesc, Sofia!","Toarc, toarc...","Ce mâini blânde ai!","Prrr... sunt cel mai fericit motan!"];
+function renderHouse(){
+  const h = $("#house"); if (!h) return;
+  let html = "";
+  CATS.filter(c=>S.owned.includes(c.id)).forEach((c,i)=>{
+    const on = c.id===S.active;
+    html += `<button class="hcat${on?" on":""}" data-pet="${c.id}" aria-label="Mângâie-l pe ${c.name}"><span class="pic"><span class="idle" style="animation-delay:-${(i*0.7)%3}s">${catSVG(c,"normal",on?S.wear:null)}</span></span><span class="nm">${c.name}</span></button>`;
+  });
+  const nextCat = CATS.find(c=>!S.owned.includes(c.id));
+  if (nextCat) html += `<button class="hcat ghost" id="houseNext" aria-label="Adoptă o pisicuță nouă"><span class="pic">${catSVG(nextCat,"normal",null)}</span><span class="nm">? · ${nextCat.price} pești</span></button>`;
+  h.innerHTML = html;
+  const g = $("#houseNext"); if (g) g.onclick = ()=>show("shop");
+}
+const petTimers = {};
+function pet(el){
+  const id = el.dataset.pet, c = catById(id);
+  const isBig = el.id === "homeCat";
+  const wear = (id===S.active) ? S.wear : null;
+  const target = isBig ? el : el.querySelector(".idle");
+  target.innerHTML = catSVG(c, "happy", wear);
+  anim(el, "purr"); SND.purr();
+  const r = el.getBoundingClientRect();
+  for (let k=0;k<3;k++){
+    const hd = document.createElement("div"); hd.className = "heart"; hd.innerHTML = HEART;
+    hd.style.left = (r.left + r.width/2 - 17 + (k-1)*18) + "px"; hd.style.top = (r.top + r.height*0.25) + "px";
+    hd.style.setProperty("--dx", ((k-1)*26) + "px"); hd.style.animationDelay = (k*0.12) + "s";
+    document.body.appendChild(hd); setTimeout(()=>hd.remove(), 1500);
+  }
+  $("#homeBubble").textContent = `${c.name}: ${rnd(c.m?PET_MSG_M:PET_MSG)}`;
+  clearTimeout(petTimers[id+isBig]);
+  petTimers[id+isBig] = setTimeout(()=>{ if (current==="home") target.innerHTML = catSVG(c, "normal", wear); }, 1400);
+}
+
+/* ---------- home ---------- */
+function renderHome(){
+  const c = catById(S.active);
+  $("#homeCat").innerHTML = catSVG(c, "normal", S.wear);
+  $("#homeCat").dataset.pet = c.id;
+  renderHouse();
+  $("#homeCatName").textContent = c.name;
+  const days = S.days.length;
+  $("#homeSub").textContent = days ? `Ai exersat în ${days} ${days===1?"zi":"zile"} · ${S.correct} răspunsuri corecte` : "Hai să începem prima rundă!";
+  const nextCat = CATS.find(x=>!S.owned.includes(x.id));
+  const msgs = [
+    `Miau! Sunt ${c.name}. Hai să exersăm împreună!`,
+    `Pentru fiecare răspuns corect primești un peștișor.`,
+    `Pas cu pas, tabla înmulțirii devine ușoară!`,
+    `Îmi place când îmi aduci peștișori. Miau!`
+  ];
+  if (nextCat && S.fish >= nextCat.price) msgs.push(`Ai destui peștișori ca ${nextCat.m?"să-l":"s-o"} adopți pe ${nextCat.name}!`);
+  else if (nextCat) msgs.push(`Încă ${nextCat.price - S.fish} peștișori și ${nextCat.m?"îl":"o"} poți adopta pe ${nextCat.name}.`);
+  $("#homeBubble").textContent = rnd(msgs);
+  ["mul","div","mix"].forEach(o=>$("#op-"+o).classList.toggle("on", S.op===o));
+  const chips = $("#tableChips"); chips.innerHTML = "";
+  for (let t=1;t<=10;t++){
+    const b = document.createElement("button");
+    b.className = "chip" + (S.tables.includes(t)?" on":""); b.id = "chip-"+t;
+    b.textContent = t; b.setAttribute("aria-pressed", S.tables.includes(t));
+    b.setAttribute("aria-label","Tabla lui "+t);
+    if (tableScore(t,"mul") >= 0.8) b.insertAdjacentHTML("beforeend", `<span class="st">${STAR(true)}</span>`);
+    b.onclick = ()=>{ SND.tap(); if (S.tables.includes(t)){ if (S.tables.length>1) S.tables = S.tables.filter(x=>x!==t); } else S.tables.push(t); S.tables.sort((a,b)=>a-b); save(); renderHome(); };
+    chips.appendChild(b);
+  }
+  const all = document.createElement("button");
+  all.className = "chip all" + (S.tables.length===10?" on":""); all.id = "chip-all";
+  all.textContent = "Toate";
+  all.onclick = ()=>{ SND.tap(); S.tables = S.tables.length===10 ? [2,3,4,5] : [1,2,3,4,5,6,7,8,9,10]; save(); renderHome(); };
+  chips.appendChild(all);
+  $("#bestRace").textContent = S.best;
+  renderMission(); renderGoal();
+  const T = weekTable(), wt = $("#weekTable"), hasT = S.tables.includes(T);
+  wt.classList.toggle("on", hasT);
+  wt.innerHTML = `<b>×${T}</b><span>Tabla săptămânii: la ea primești <b style="font-size:inherit">peștișori dubli</b>! ${hasT?"":"Atinge ca s-o adaugi."}</span>`;
+  wt.onclick = ()=>{ if (!S.tables.includes(T)){ S.tables.push(T); S.tables.sort((a,b)=>a-b); save(); SND.tap(); renderHome(); } };
+  const ch = $("#chip-"+T); if (ch) ch.insertAdjacentHTML("beforeend", `<span class="x2">×2</span>`);
+  checkStreak();
+  renderFish();
+}
+
+/* ---------- game ---------- */
+let G = null, timerId = null;
+const GOOD = ["Bravo, Sofia!","Excelent!","Miau-minunat!","Super!","Corect! Așa da!","Ești o campioană!","Perfect!","Toarce de bucurie!"];
+const RETRY = ["Aproape! Mai încearcă o dată.","Hmm, mai gândește-te puțin.","Nu-i nimic, mai încearcă!"];
+const CHEER = ["Tu poți!","Gândește-te liniștit.","Sunt lângă tine.","Hai, încă una!","Miau, ce frumos lucrezi!"];
+
+function start(mode){
+  ac();
+  G = {mode, queue:[], i:0, results:[], fish:0, attempts:0, hintUsed:false, input:"", locked:false, streak:0, score:0, missed:new Map(), requeued:{}};
+  if (mode === "round"){
+    const recent = [];
+    for (let k=0;k<10;k++){ const f = pick(recent); G.queue.push(f); recent.push(f.key); if (recent.length>4) recent.shift(); }
+  } else {
+    G.queue.push(pick([]));
+  }
+  $("#roundDots").hidden = mode!=="round";
+  $("#raceBar").hidden = mode!=="race";
+  $("#hintBtn").hidden = mode!=="round";
+  show("play");
+  if (mode === "race"){
+    $("#yarn").innerHTML = YARN;
+    $("#runner").innerHTML = catSVG(catById(S.active), "normal", S.wear);
+    G.target = Math.max(S.best + 1, 12);
+    G.endAt = performance.now() + 60000;
+    updateRace();
+    timerId = setInterval(tick, 100);
+  }
+  renderQ();
+}
+function cur(){ return G.queue[G.i]; }
+function setCat(mood){ $("#playCat").innerHTML = catSVG(catById(S.active), mood, S.wear); }
+function renderDots(){
+  if (G.mode !== "round") return;
+  const d = $("#roundDots"); d.innerHTML = "";
+  G.queue.forEach((f,i)=>{
+    const el = document.createElement("i");
+    const r = G.results[i];
+    if (i === G.i && r === undefined) el.className = "now";
+    else if (r === "ok") el.className = "ok";
+    else if (r === "retry") el.className = "retry";
+    d.appendChild(el);
+  });
+}
+function renderQ(){
+  const f = cur();
+  $("#qKind").textContent = f.kind==="mul" ? "Înmulțire" : "Împărțire";
+  $("#qA").textContent = f.a; $("#qB").textContent = f.b;
+  $("#qOp").textContent = f.kind==="mul" ? "×" : ":";
+  const a = $("#ansBox"); a.textContent = "?"; a.className = "ans";
+  const fb = $("#feedback"); fb.textContent = ""; fb.className = "feedback";
+  $("#hintArea").hidden = true; $("#hintArea").innerHTML = "";
+  $("#nextBtn").hidden = true;
+  if (G.mode==="round") $("#hintBtn").hidden = false;
+  G.attempts = 0; G.hintUsed = false; G.input = ""; G.locked = false;
+  setCat("normal");
+  $("#playBubble").textContent = rnd(CHEER);
+  renderDots();
+}
+function press(k){
+  if (!G || G.locked || current!=="play") return;
+  if (k === "ok"){ if (G.input) check(); return; }
+  if (k === "del"){ G.input = G.input.slice(0,-1); }
+  else if (G.input.length < 3){ G.input = (G.input==="0" ? "" : G.input) + k; }
+  SND.tap();
+  const a = $("#ansBox");
+  a.textContent = G.input || "?"; a.className = "ans" + (G.input ? " typing" : "");
+}
+function rec(key){ return S.facts[key] || (S.facts[key] = {b:0,c:0,w:0}); }
+function check(){
+  const f = cur(), v = parseInt(G.input,10), a = $("#ansBox"), fb = $("#feedback");
+  if (v === f.ans){
+    G.locked = true;
+    a.className = "ans ok"; a.textContent = f.ans;
+    setCat("happy"); anim($("#playCat"),"bounce"); SND.meow();
+    const clean = G.attempts===0 && !G.hintUsed;
+    const r = rec(f.key); r.c++; if (clean) r.b = Math.min(5, r.b+1);
+    S.correct++; markDay();
+    const dbl = isWeekFact(f);
+    let gain = dbl ? 2 : 1;
+    if (G.mode === "round"){
+      G.streak = clean ? G.streak+1 : 0;
+      const five = G.streak>0 && G.streak%5===0;
+      if (five){ gain += 2; }
+      if (G.results[G.i] === undefined) G.results[G.i] = clean ? "ok" : "retry";
+      fb.textContent = rnd(GOOD) + (dbl ? ` Tabla săptămânii: peștișori dubli!` : "") + (five ? ` ${G.streak} la rând: bonus +2!` : "");
+    } else {
+      G.score++; updateRace(); fb.textContent = rnd(GOOD) + (dbl ? " Peștișori dubli!" : "");
+    }
+    addFish(gain); renderFish(true); flyFish(gain, a);
+    $("#playBubble").textContent = rnd(["Miau! Mulțumesc pentru peștișor!","Mmm, ce bun!","Toarc, toarc!","Ești grozavă!"]);
+    if (G.goalJustDone && !G.goalAnnounced){ G.goalAnnounced = true; $("#playBubble").textContent = `Ai adunat ${S.goal} de peștișori! Misiune îndeplinită! Taro are o medalie pentru tine. Seria ta: ${S.streak.count} ${S.streak.count===1?"zi":"zile"}, +5 peștișori!`; anim($("#goalPill"),"bounce"); }
+    save();
+    setTimeout(next, G.mode==="race" ? 450 : 1100);
+    return;
+  }
+  // wrong
+  G.attempts++;
+  const r = rec(f.key);
+  if (G.attempts === 1){ r.w++; r.b = Math.max(0, r.b-1); }
+  anim($("#qCard"),"shake"); SND.boop(); setCat("oops");
+  G.streak = 0;
+  if (G.mode === "race"){
+    G.locked = true; a.className = "ans reveal"; a.textContent = f.ans;
+    fb.textContent = `Era ${f.ans}. Data viitoare o știi!`;
+    G.missed.set(f.key, f); save();
+    setTimeout(next, 1400); return;
+  }
+  if (G.attempts === 1){
+    a.className = "ans bad"; a.textContent = G.input; G.input = "";
+    fb.textContent = rnd(RETRY);
+    $("#playBubble").textContent = "Hmm... mai încearcă, te aștept!";
+    setTimeout(()=>{ if (!G.locked && !G.input){ a.className="ans"; a.textContent="?"; } }, 900);
+  } else {
+    G.locked = true;
+    G.results[G.i] = "retry";
+    a.className = "ans reveal"; a.textContent = f.ans;
+    fb.className = "feedback tip"; fb.textContent = tipFor(f);
+    showHint(f, false);
+    $("#hintBtn").hidden = true; $("#nextBtn").hidden = false;
+    $("#playBubble").textContent = "Uite cum se face. O să revină mai încolo!";
+    G.missed.set(f.key, f);
+    const n = G.requeued[f.key] || 0;
+    if (n < 1 && G.queue.length < 14){
+      G.requeued[f.key] = n+1;
+      G.queue.splice(Math.min(G.i+3, G.queue.length), 0, Object.assign({}, f));
+    }
+    renderDots();
+  }
+  save();
+}
+function showHint(f, asHelp){
+  let rows, cols, cap;
+  if (f.kind === "mul"){ rows = f.a; cols = f.b; cap = `${f.a} rânduri a câte ${f.b} lăbuțe`; }
+  else { rows = f.b; cols = f.ans; cap = asHelp ? `${f.a} lăbuțe așezate în ${f.b} rânduri egale. Câte sunt pe un rând?` : `${f.a} lăbuțe în ${f.b} rânduri: câte ${f.ans} pe fiecare rând`; }
+  const size = Math.max(11, Math.min(24, Math.floor(260 / Math.max(rows, cols))));
+  let html = `<div class="hint-cap">${cap}</div><div class="paws" style="grid-template-columns:repeat(${cols}, ${size}px);--pw:${size}px">`;
+  for (let r=0;r<rows;r++) for (let c=0;c<cols;c++) html += `<span class="r${r%2}">${PAW}</span>`;
+  html += `</div>`;
+  const h = $("#hintArea"); h.innerHTML = html; h.hidden = false;
+}
+function next(){
+  if (!G) return;
+  if (G.mode === "race"){
+    if (performance.now() >= G.endAt) return;
+    const recent = G.queue.slice(-4).map(f=>f.key);
+    G.queue.push(pick(recent)); G.i++; renderQ(); return;
+  }
+  G.i++;
+  if (G.i >= G.queue.length) finishRound(); else renderQ();
+}
+function tick(){
+  if (!G || G.mode!=="race") return;
+  const left = Math.max(0, G.endAt - performance.now());
+  const s = Math.ceil(left/1000);
+  const t = $("#timer"); t.textContent = s; t.classList.toggle("low", s<=10);
+  if (left <= 0){ stopTimer(); G.locked = true; setTimeout(finishRace, 500); }
+}
+function stopTimer(){ if (timerId){ clearInterval(timerId); timerId = null; } }
+function updateRace(){
+  const p = Math.min(1, G.score / G.target);
+  $("#runner").style.left = `calc(${p*100}% - ${p*52}px)`;
+  $("#raceFill").style.width = (p*100)+"%";
+  if (G.score === G.target && G.target > S.best && S.best>0) $("#playBubble").textContent = "Am prins ghemul! Record nou!";
+}
+
+/* ---------- results ---------- */
+function finishRound(){
+  const firstTry = G.results.slice(0,10).filter(r=>r==="ok").length;
+  const missed = [...G.missed.values()];
+  const stars = missed.length===0 ? 3 : missed.length<=2 ? 2 : 1;
+  let bonus = stars===3 ? 3 : 0;
+  if (bonus) addFish(bonus); S.rounds++; save(); renderFish(true);
+  const titles = {3:"Rundă perfectă!", 2:"Foarte bine!", 1:"Ai terminat runda!"};
+  const cat = catById(S.active);
+  $("#resultCard").innerHTML = `
+    <div class="stars">${STAR(stars>=1)}${STAR(stars>=2)}${STAR(stars>=3)}</div>
+    <h2>${titles[stars]}</h2>
+    <div class="mini-cat">${catSVG(cat,"happy",S.wear)}</div>
+    <div class="stat-row">
+      <div class="stat"><b>${firstTry}/10</b><span>din prima încercare</span></div>
+      <div class="stat"><b>+${G.fish}</b><span>peștișori câștigați</span></div>
+    </div>
+    ${bonus?`<div>Bonus pentru rundă perfectă: +3 peștișori!</div>`:""}
+    ${weekWinBlock()}
+    ${missionResultBlock()}
+    ${giftBlock()}
+    ${missed.length?`<div class="label">Mai exersăm acestea</div><div class="review">${missed.map(f=>`<span>${f.a} ${f.kind==="mul"?"×":":"} ${f.b} = ${f.ans}</span>`).join("")}</div>`:`<div>${cat.name} toarce de mândrie. Nicio greșeală!</div>`}
+    <div class="actions">
+      <button class="btn primary" id="againBtn">Încă o rundă</button>
+      <button class="btn white" id="toHome">Acasă</button>
+    </div>`;
+  wireGift();
+  $("#againBtn").onclick = ()=>start("round");
+  $("#toHome").onclick = ()=>show("home");
+  show("result");
+  if (stars>=2 || G.goalJustDone){ SND.fanfare(); confetti(); } else SND.meow();
+}
+function finishRace(){
+  if (!G) return;
+  const isRecord = G.score > S.best;
+  if (isRecord) S.best = G.score;
+  save();
+  const cat = catById(S.active);
+  const missed = [...G.missed.values()];
+  $("#resultCard").innerHTML = `
+    <h2>${isRecord && G.score>0 ? "Record nou!" : "Gata cursa!"}</h2>
+    <div class="mini-cat">${catSVG(cat, G.score>0?"happy":"normal", S.wear)}</div>
+    <div class="stat-row">
+      <div class="stat"><b>${G.score}</b><span>răspunsuri corecte</span></div>
+      <div class="stat"><b>${S.best}</b><span>recordul tău</span></div>
+      <div class="stat"><b>+${G.fish}</b><span>peștișori</span></div>
+    </div>
+    ${weekWinBlock()}
+    ${missionResultBlock()}
+    ${giftBlock()}
+    ${missed.length?`<div class="label">De repetat</div><div class="review">${missed.map(f=>`<span>${f.a} ${f.kind==="mul"?"×":":"} ${f.b} = ${f.ans}</span>`).join("")}</div>`:""}
+    <div class="actions">
+      <button class="btn gold" id="againBtn">Încă o cursă</button>
+      <button class="btn white" id="toHome">Acasă</button>
+    </div>`;
+  wireGift();
+  $("#againBtn").onclick = ()=>start("race");
+  $("#toHome").onclick = ()=>show("home");
+  show("result");
+  if ((isRecord && G.score>0) || G.goalJustDone){ SND.fanfare(); confetti(); } else SND.meow();
+}
+
+/* ---------- shop ---------- */
+function renderShop(){
+  const active = catById(S.active);
+  $("#shopCat").innerHTML = catSVG(active, "happy", S.wear);
+  const cg = $("#catGrid"); cg.innerHTML = "";
+  CATS.forEach(c=>{
+    const owned = S.owned.includes(c.id), isActive = S.active===c.id;
+    const card = document.createElement("div");
+    card.className = "pcard card" + (owned?"":" locked") + (isActive?" active":"") + (c.special?" golden":"");
+    let btn;
+    if (isActive) btn = `<button class="btn mint" disabled style="background:var(--mint);color:#fff;border-color:var(--ink);box-shadow:0 4px 0 var(--ink)">Pisica ta</button>`;
+    else if (owned) btn = `<button class="btn white" data-pick="${c.id}">Alege</button>`;
+    else btn = `<button class="btn gold" data-buy="${c.id}" ${S.fish<c.price?"disabled":""}>Adoptă</button>`;
+    card.innerHTML = `${c.special?`<div class="special-tag">Pisica de aur</div>`:""}<div class="pic">${catSVG(c, owned?"normal":"normal", isActive?S.wear:null)}</div>
+      <h3>${c.name}</h3><div class="need">${c.desc}</div>
+      ${owned?"":`<div class="price">${FISH}${c.price}</div>`}
+      ${btn}
+      ${!owned && S.fish<c.price?`<div class="need">Îți mai trebuie ${c.price-S.fish}</div>`:""}`;
+    cg.appendChild(card);
+  });
+  const ag = $("#accGrid"); ag.innerHTML = "";
+  ACCS.forEach(x=>{
+    const owned = S.ownedAcc.includes(x.id), worn = S.wear===x.id;
+    const card = document.createElement("div");
+    card.className = "pcard card" + (worn?" active":"");
+    let btn;
+    if (worn) btn = `<button class="btn white" data-unwear="${x.id}">Scoate</button>`;
+    else if (owned) btn = `<button class="btn mint" data-wear="${x.id}">Poartă</button>`;
+    else if (x.prize) btn = `<button class="btn" disabled>Premiu</button>`;
+    else btn = `<button class="btn gold" data-buyacc="${x.id}" ${S.fish<x.price?"disabled":""}>Cumpără</button>`;
+    if (x.prize) card.classList.add("golden");
+    card.innerHTML = `${x.prize?`<div class="special-tag">Premiu săptămâna ${x.prize}</div>`:""}<div class="pic">${catSVG(active,"normal",x.id)}</div><h3>${x.name}</h3>
+      ${owned||x.prize?"":`<div class="price">${FISH}${x.price}</div>`}${btn}
+      ${x.prize&&!owned?`<div class="need">Se câștigă duminica, după o săptămână completă</div>`:""}
+      ${!owned && !x.prize && S.fish<x.price?`<div class="need">Îți mai trebuie ${x.price-S.fish}</div>`:""}`;
+    ag.appendChild(card);
+  });
+}
+document.addEventListener("click", e=>{
+  const b = e.target.closest("button"); if (!b) return;
+  const d = b.dataset;
+  if (d.pet && current==="home"){ pet(b); return; }
+  if (d.pick){ S.active = d.pick; save(); SND.meow(); renderShop(); }
+  if (d.buy){ const c = catById(d.buy); if (S.fish>=c.price && !S.owned.includes(c.id)){ S.fish -= c.price; S.owned.push(c.id); S.active = c.id; save(); renderFish(true); SND.fanfare(); confetti(); renderShop(); } }
+  if (d.buyacc){ const x = ACCS.find(a=>a.id===d.buyacc); if (x && S.fish>=x.price && !S.ownedAcc.includes(x.id)){ S.fish -= x.price; S.ownedAcc.push(x.id); S.wear = x.id; save(); renderFish(true); SND.coin(); confetti(); renderShop(); } }
+  if (d.wear){ S.wear = d.wear; save(); SND.coin(); renderShop(); }
+  if (d.unwear){ S.wear = null; save(); SND.tap(); renderShop(); }
+});
+
+/* ---------- progress ---------- */
+function tableScore(t, kind){
+  let s = 0;
+  for (let n=1;n<=10;n++) s += box(kind==="mul" ? mulKey(t,n) : divKey(t*n,t));
+  return s / 50;
+}
+function renderProgress(){
+  let known = 0;
+  for (let a=1;a<=10;a++) for (let b=a;b<=10;b++) if (box(mulKey(a,b))>=4) known++;
+  let knownDiv = 0;
+  for (let t=1;t<=10;t++) for (let n=1;n<=10;n++) if (box(divKey(t*n,t))>=4) knownDiv++;
+  $("#progTiles").innerHTML = `
+    <div class="tile card"><b>${known}<small style="font-size:20px">/55</small></b><span>înmulțiri știute</span></div>
+    <div class="tile card"><b>${knownDiv}<small style="font-size:20px">/100</small></b><span>împărțiri știute</span></div>
+    <div class="tile card"><b>${S.correct}</b><span>răspunsuri corecte</span></div>
+    <div class="tile card"><b>${S.best}</b><span>record la cursa cu ghemul</span></div>`;
+  let h = `<table class="mt"><tr><th class="corner">×</th>`;
+  for (let c=1;c<=10;c++) h += `<th>${c}</th>`;
+  h += `</tr>`;
+  for (let r=1;r<=10;r++){
+    h += `<tr><th>${r}</th>`;
+    for (let c=1;c<=10;c++){
+      const k = mulKey(r,c), bx = box(k), seen = !!S.facts[k];
+      const lvl = !seen ? "" : bx>=5 ? "l4" : bx>=3 ? "l3" : bx>=2 ? "l2" : "l1";
+      h += `<td class="${lvl}" title="${r} × ${c} = ${r*c}">${r*c}</td>`;
+    }
+    h += `</tr>`;
+  }
+  $("#mtWrap").innerHTML = h + `</table>`;
+  let bars = "";
+  for (let t=1;t<=10;t++){
+    bars += `<div class="bar-row"><span class="t">×${t}</span><div class="bar"><i style="width:${Math.round(tableScore(t,"mul")*100)}%"></i></div><div class="bar div"><i style="width:${Math.round(tableScore(t,"div")*100)}%"></i></div></div>`;
+  }
+  $("#bars").innerHTML = bars;
+  renderCal(); renderGoalSet();
+  const ri = $("#realReward"); ri.value = S.realReward || ""; ri.oninput = ()=>{ S.realReward = ri.value; save(); };
+  renderReset(false);
+}
+function renderCal(){
+  const names = ["Lu","Ma","Mi","Jo","Vi","Sâ","Du"];
+  let h = names.map(n=>`<div class="dn">${n}</div>`).join("");
+  const now = new Date(); const start = new Date(now); start.setDate(now.getDate()-27);
+  const lead = (start.getDay()+6)%7;
+  for (let i=0;i<lead;i++) h += `<div class="d empty"></div>`;
+  for (let i=0;i<28;i++){
+    const d = new Date(start); d.setDate(start.getDate()+i);
+    const k = d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+    const cls = S.goalDays.includes(k) ? "done" : S.fixedDays.includes(k) ? "fix" : (S.dayFish[k] ? "part" : "");
+    h += `<div class="d ${cls}${i===27?" today":""}" title="${S.dayFish[k]||0} peștișori">${d.getDate()}</div>`;
+  }
+  $("#cal").innerHTML = h;
+  const n = S.goalDays.length;
+  $("#calNote").textContent = `Zilele verzi sunt cele cu misiunea îndeplinită (${S.goal} de peștișori). Până acum: ${n} ${n===1?"zi":"zile"}. Galben: ai exersat, dar nu ai terminat misiunea. Albastru: zi salvată cu peștișori. Seria de acum: ${S.streak.count} ${S.streak.count===1?"zi":"zile"}.`;
+}
+function renderGoalSet(){
+  const opts = [30,50,80,100];
+  $("#goalSet").innerHTML = `<span>Pentru părinți, misiunea zilnică:</span>` + opts.map(o=>`<button data-goal="${o}" class="${S.goal===o?"on":""}">${o}</button>`).join("");
+  $("#goalSet").querySelectorAll("button").forEach(b=>b.onclick=()=>{ S.goal = +b.dataset.goal; if (todayFish()>=S.goal && !goalDone()) S.goalDays.push(today()); save(); renderGoal(); renderProgress(); });
+}
+function renderReset(ask){
+  const r = $("#resetRow");
+  if (!ask){ r.innerHTML = `<button class="link-btn" id="resetBtn">Pentru părinți: ia totul de la început</button>`; $("#resetBtn").onclick = ()=>renderReset(true); return; }
+  r.innerHTML = `<div class="confirm"><span>Se șterg peștișorii, pisicuțele și progresul de pe această tabletă. Sigur?</span><button class="btn primary" id="yesReset">Da, șterge</button><button class="btn white" id="noReset">Nu</button></div>`;
+  $("#yesReset").onclick = ()=>{ const snd = S.sound, goal = S.goal; S = clone(DEF); S.sound = snd; S.goal = goal; save(); renderFish(); renderGoal(); renderProgress(); };
+  $("#noReset").onclick = ()=>renderReset(false);
+}
+
+/* ---------- confetti ---------- */
+function confetti(){
+  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const cv = $("#confetti"), ctx = cv.getContext("2d");
+  const W = cv.width = innerWidth * devicePixelRatio, H = cv.height = innerHeight * devicePixelRatio;
+  const cols = ["#FF7A8A","#FFC940","#4F9FDE","#23A970","#F2994A","#FFFFFF"];
+  const P = Array.from({length:130}, ()=>({x:Math.random()*W, y:-Math.random()*H*0.4, vx:(Math.random()-.5)*4*devicePixelRatio, vy:(2+Math.random()*4)*devicePixelRatio, s:(6+Math.random()*8)*devicePixelRatio, r:Math.random()*6, vr:(Math.random()-.5)*.3, c:rnd(cols), paw:Math.random()<.25}));
+  const t0 = performance.now();
+  (function frame(t){
+    ctx.clearRect(0,0,W,H);
+    P.forEach(p=>{
+      p.x += p.vx; p.y += p.vy; p.vy += .06*devicePixelRatio; p.r += p.vr;
+      ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.r); ctx.fillStyle = p.c;
+      if (p.paw){ ctx.beginPath(); ctx.arc(0,p.s*.25,p.s*.4,0,7); ctx.fill(); [-.45,-.15,.15,.45].forEach((dx,i)=>{ ctx.beginPath(); ctx.arc(dx*p.s, (i===0||i===3?-.15:-.4)*p.s, p.s*.16,0,7); ctx.fill(); }); }
+      else ctx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);
+      ctx.restore();
+    });
+    if (t - t0 < 2600) requestAnimationFrame(frame); else ctx.clearRect(0,0,W,H);
+  })(t0);
+}
+
+/* ---------- wiring ---------- */
+document.querySelectorAll(".fish-ico").forEach(e=>e.innerHTML = FISH);
+document.querySelectorAll(".ico-paw").forEach(e=>{ e.innerHTML = PAW; e.style.cssText="display:inline-flex;width:28px;height:28px;color:#FF7A8A"; e.firstChild.style.cssText="width:28px;height:28px"; });
+document.querySelectorAll(".ico-cat").forEach(e=>{ e.style.cssText="display:inline-block;width:40px;height:42px"; e.innerHTML = catSVG(CATS[0],"happy",null); });
+
+const pad = $("#numpad");
+["1","2","3","4","5","6","7","8","9","del","0","ok"].forEach(k=>{
+  const b = document.createElement("button");
+  b.className = "btn white" + (k==="ok"?" ok-key":"") + (k==="del"?" del-key":"");
+  b.id = "key-"+k;
+  if (k==="del"){ b.setAttribute("aria-label","Șterge"); b.innerHTML = `<svg viewBox="0 0 36 28" fill="none" stroke="${INK}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3h20v22H12L2 14z" fill="#fff"/><path d="M18 9l9 10M27 9l-9 10"/></svg>`; }
+  else if (k==="ok") b.textContent = "Gata";
+  else b.textContent = k;
+  b.addEventListener("pointerdown", e=>{ e.preventDefault(); press(k); });
+  b.addEventListener("keydown", e=>{ if (e.key==="Enter"||e.key===" "){ e.preventDefault(); press(k); } });
+  pad.appendChild(b);
+});
+document.addEventListener("keydown", e=>{
+  if (current!=="play") return;
+  if (/^[0-9]$/.test(e.key)) press(e.key);
+  else if (e.key==="Backspace") press("del");
+  else if (e.key==="Enter"){ if (!$("#nextBtn").hidden) next(); else press("ok"); }
+});
+$("#hintBtn").onclick = ()=>{ if (!G || G.locked) return; G.hintUsed = true; SND.tap(); showHint(cur(), true); $("#playBubble").textContent = "Numără lăbuțele, te ajută!"; };
+$("#nextBtn").onclick = ()=>next();
+$("#opSeg").addEventListener("click", e=>{ const b = e.target.closest("button"); if (!b) return; SND.tap(); S.op = b.dataset.op; save(); renderHome(); });
+$("#startRound").onclick = ()=>start("round");
+$("#startRace").onclick = ()=>start("race");
+$("#openShop").onclick = ()=>show("shop");
+$("#openProgress").onclick = ()=>show("progress");
+$("#homeBtn").onclick = ()=>{ G = null; show("home"); };
+$("#soundBtn").onclick = ()=>{ S.sound = !S.sound; save(); renderSound(); if (S.sound) SND.meow(); };
+
+renderSound(); renderFish(); renderGoal(); show("home");
+})();
+</script>
+
+</body>
+</html>
